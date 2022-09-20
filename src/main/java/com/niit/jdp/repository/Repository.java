@@ -11,7 +11,7 @@ public interface Repository <T> {
 
     List<T> getByGenre(Connection connection, String genre) throws SQLException;
 
-    List<T> getBySongName(Connection connection, String songName);
+    List<T> getBySongName(Connection connection, String songName) throws SQLException;
 
 
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added method to get all the songs from database by artist">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added method to get all the songs from database by genre">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -18,6 +18,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +101,7 @@
       <workItem from="1663696947608" duration="2091000" />
       <workItem from="1663700870609" duration="444000" />
       <workItem from="1663701332802" duration="332000" />
-      <workItem from="1663701685437" duration="1100000" />
+      <workItem from="1663701685437" duration="1494000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -361,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663702604182</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="added method to get all the songs from database by genre">
+      <created>1663703029153</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1663703029153</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +387,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created parameterised Constructor in Playlist class" />
     <MESSAGE value="created getter and setter in Playlist class" />
     <MESSAGE value="overridden equal and hashCode method in Playlist class" />
     <MESSAGE value="overridden to string method in Playlist class" />
@@ -404,7 +411,8 @@
     <MESSAGE value="added the java docs in DatabaseService" />
     <MESSAGE value="added method to get all the songs from database" />
     <MESSAGE value="added method to get all the songs from database by artist" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method to get all the songs from database by artist" />
+    <MESSAGE value="added method to get all the songs from database by genre" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method to get all the songs from database by genre" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
