@@ -6,6 +6,8 @@
  */
 package com.niit.jdp.model;
 
+import java.util.Objects;
+
 public class Playlist {
     private String playlistName;
     private Song song;
@@ -32,5 +34,18 @@ public class Playlist {
 
     public void setSong(Song song) {
         this.song = song;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Playlist playlist = (Playlist) o;
+        return Objects.equals(playlistName, playlist.playlistName) && Objects.equals(song, playlist.song);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(playlistName, song);
     }
 }
