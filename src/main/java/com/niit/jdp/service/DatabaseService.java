@@ -25,4 +25,7 @@ public class DatabaseService {
     public boolean connect(){
         return false;
     }
+    public void printConnectionStatus(){
+
+    }
 }
