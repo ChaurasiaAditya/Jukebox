@@ -88,4 +88,16 @@ public class Song {
     public int hashCode() {
         return Objects.hash(songNumber, songName, songUrl, duration, artist, genre);
     }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "songNumber=" + songNumber +
+                ", songName='" + songName + '\'' +
+                ", songUrl='" + songUrl + '\'' +
+                ", duration=" + duration +
+                ", artist='" + artist + '\'' +
+                ", genre='" + genre + '\'' +
+                '}';
+    }
 }
