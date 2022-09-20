@@ -8,7 +8,10 @@ package com.niit.jdp.repository;
 
 import com.niit.jdp.model.Song;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,36 +28,70 @@ public class SongRepository implements Repository<Song> {
         String query = "SELECT * FROM `jukebox`.`songs`;";
 
         // create a statement object
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
 
-        // execute the query
-        ResultSet resultSet = preparedStatement.executeQuery();
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-        // iterate over the result set and add the songs to the list
-        while (resultSet.next()){
-            int songNumber = resultSet.getInt("song_number");
-            String songName = resultSet.getString("song_name");
-            String artist = resultSet.getString("artist");
-            String genre = resultSet.getString("genre");
-            String duration = resultSet.getString("duration");
+            // execute the query
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            // create a song object
-            Song song = new Song(songNumber,songName,artist,genre,duration);
 
-            // add the song to the list
-            songList.add(song);
+            // iterate over the result set and add the songs to the list
+            while (resultSet.next()) {
+                int songNumber = resultSet.getInt("song_number");
+                String songName = resultSet.getString("song_name");
+                String artist = resultSet.getString("artist");
+                String genre = resultSet.getString("genre");
+                String duration = resultSet.getString("duration");
+
+                // create a song object
+                Song song = new Song(songNumber, songName, artist, genre, duration);
+
+                // add the song to the list
+                songList.add(song);
+            }
+            // return the list
+            return songList;
         }
-        // return the list
-        return songList;
     }
 
     @Override
-    public List<Song> getByArtist(Connection connection, String artist) {
-        return null;
+    public List<Song> getByArtist(Connection connection, String artist) throws SQLException {
+        // Create a list of songs
+        List<Song> songList = new ArrayList<>();
+
+        // write the query to get all the songs from the database by artist
+        String query = "SELECT * FROM `jukebox`.`songs` WHERE (`artist` = ?);";
+
+        // create a statement object using the connection object
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            // set the value in prepared statement
+            preparedStatement.setString(1, artist);
+
+            // execute the query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // iterate over the result set and add the songs to the list
+            while (resultSet.next()) {
+                int songNumber = resultSet.getInt("song_number");
+                String songName = resultSet.getString("song_name");
+                String artists = resultSet.getString("artist");
+                String genre = resultSet.getString("genre");
+                String duration = resultSet.getString("duration");
+
+                // create a song object
+                Song song = new Song(songNumber, songName, artists, genre, duration);
+
+                // add the song to the list
+                songList.add(song);
+            }
+            // return the list
+            return songList;
+        }
     }
 
     @Override
-    public List<Song> getByGenre(Connection connection, String genre){
+    public List<Song> getByGenre(Connection connection, String genre) {
         return null;
     }
 

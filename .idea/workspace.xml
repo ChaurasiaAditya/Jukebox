@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added interface for Repository">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Look Both Ways - Nathan Moore (1).wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Look Both Ways - Nathan Moore.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall Butterflies - Asher Fulero.wav" afterDir="false" />
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added method to get all the songs from database">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Fade.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Heaven.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Janji.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Kiss Heavens.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Light.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +51,20 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aditya/IdeaProjects/capstone-project-jukebox&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aditya/IdeaProjects/Jukebox/src/main/resources/songs&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aditya\IdeaProjects\Jukebox\src\main\resources\songs" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
@@ -84,6 +98,10 @@
       <workItem from="1663686946104" duration="516000" />
       <workItem from="1663687965377" duration="2525000" />
       <workItem from="1663690513695" duration="880000" />
+      <workItem from="1663696947608" duration="2091000" />
+      <workItem from="1663700870609" duration="444000" />
+      <workItem from="1663701332802" duration="332000" />
+      <workItem from="1663701685437" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -316,7 +334,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663688194009</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="updated the to string method in song">
+      <created>1663697226087</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1663697226087</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added the java docs in DatabaseService">
+      <created>1663697424888</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1663697424888</updated>
+    </task>
+    <task id="LOCAL-00036" summary="added method to get all the songs from database">
+      <created>1663701216453</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1663701216453</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,9 +373,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="overridden to string method in Song class" />
-    <MESSAGE value="created Playlist class" />
-    <MESSAGE value="created private attributes in Playlist class" />
     <MESSAGE value="created no args Constructor in Playlist class" />
     <MESSAGE value="created parameterised Constructor in Playlist class" />
     <MESSAGE value="created getter and setter in Playlist class" />
@@ -359,7 +395,10 @@
     <MESSAGE value="added connect method in DatabaseService class" />
     <MESSAGE value="added print connect method in DatabaseService class" />
     <MESSAGE value="added interface for Repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="added interface for Repository" />
+    <MESSAGE value="updated the to string method in song" />
+    <MESSAGE value="added the java docs in DatabaseService" />
+    <MESSAGE value="added method to get all the songs from database" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method to get all the songs from database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
