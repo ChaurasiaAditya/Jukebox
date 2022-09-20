@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created songRepository interface" />
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created PlaylistRepository class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663673815505</updated>
-      <workItem from="1663673818940" duration="1533000" />
+      <workItem from="1663673818940" duration="1853000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -169,7 +171,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663675353670</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="created Repository interface">
+      <created>1663675510105</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675510105</updated>
+    </task>
+    <task id="LOCAL-00019" summary="created song repository class">
+      <created>1663675588122</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675588122</updated>
+    </task>
+    <task id="LOCAL-00020" summary="created PlaylistRepository class">
+      <created>1663675644871</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675644871</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +227,10 @@
     <MESSAGE value="overridden equal and hashCode method in Playlist class" />
     <MESSAGE value="overridden to string method in Playlist class" />
     <MESSAGE value="created songRepository interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="created songRepository interface" />
+    <MESSAGE value="created Repository interface" />
+    <MESSAGE value="created song repository class" />
+    <MESSAGE value="created PlaylistRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created PlaylistRepository class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
