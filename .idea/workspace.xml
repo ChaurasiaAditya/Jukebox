@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created private attributes in Playlist class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
-    </list>
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created songRepository interface" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663673815505</updated>
-      <workItem from="1663673818940" duration="1221000" />
+      <workItem from="1663673818940" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -128,7 +127,49 @@
       <option name="project" value="LOCAL" />
       <updated>1663674766430</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="created no args Constructor in Playlist class">
+      <created>1663675048042</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675048042</updated>
+    </task>
+    <task id="LOCAL-00013" summary="created parameterised Constructor in Playlist class">
+      <created>1663675067861</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675067861</updated>
+    </task>
+    <task id="LOCAL-00014" summary="created getter and setter in Playlist class">
+      <created>1663675114908</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675114908</updated>
+    </task>
+    <task id="LOCAL-00015" summary="overridden equal and hashCode method in Playlist class">
+      <created>1663675172755</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675172755</updated>
+    </task>
+    <task id="LOCAL-00016" summary="overridden to string method in Playlist class">
+      <created>1663675198981</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675198981</updated>
+    </task>
+    <task id="LOCAL-00017" summary="created songRepository interface">
+      <created>1663675353670</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663675353670</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +198,13 @@
     <MESSAGE value="overridden to string method in Song class" />
     <MESSAGE value="created Playlist class" />
     <MESSAGE value="created private attributes in Playlist class" />
-    <option name="LAST_COMMIT_MESSAGE" value="created private attributes in Playlist class" />
+    <MESSAGE value="created no args Constructor in Playlist class" />
+    <MESSAGE value="created parameterised Constructor in Playlist class" />
+    <MESSAGE value="created getter and setter in Playlist class" />
+    <MESSAGE value="overridden equal and hashCode method in Playlist class" />
+    <MESSAGE value="overridden to string method in Playlist class" />
+    <MESSAGE value="created songRepository interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="created songRepository interface" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
