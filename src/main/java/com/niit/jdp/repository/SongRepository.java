@@ -55,6 +55,7 @@ public class SongRepository implements Repository<Song> {
     }
 
     @Override
+    // This method is used to get all the songs from the database by artist.
     public List<Song> getByArtist(Connection connection, String artist) throws SQLException {
         // Create a list of songs
         List<Song> songList = new ArrayList<>();
@@ -91,8 +92,40 @@ public class SongRepository implements Repository<Song> {
     }
 
     @Override
-    public List<Song> getByGenre(Connection connection, String genre) {
-        return null;
+    // This method is used to get all the songs from the database by genre.
+    public List<Song> getByGenre(Connection connection, String genre) throws SQLException {
+        // Create a list of songs
+        List<Song> songList = new ArrayList<>();
+
+        // write the query to get all the songs from the database by genre
+        String query = "SELECT * FROM `jukebox`.`songs` WHERE (`genre` = ?);";
+
+        // create a statement object using the connection object
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            // set the value in prepared statement
+            preparedStatement.setString(1, genre);
+
+            // execute the query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // iterate over the result set and add the songs to the list
+            while (resultSet.next()) {
+                int songNumber = resultSet.getInt("song_number");
+                String songName = resultSet.getString("song_name");
+                String artists = resultSet.getString("artist");
+                String genres = resultSet.getString("genre");
+                String duration = resultSet.getString("duration");
+
+                // create a song object
+                Song song = new Song(songNumber, songName, artists, genres, duration);
+
+                // add the song to the list
+                songList.add(song);
+            }
+            // return the list
+            return songList;
+        }
     }
 
     @Override
