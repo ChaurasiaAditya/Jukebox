@@ -13,4 +13,7 @@ public class Song {
     private double duration;
     private String artist;
     private String genre;
+
+    public Song() {
+    }
 }
