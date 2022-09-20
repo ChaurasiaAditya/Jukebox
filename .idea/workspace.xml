@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="made the Repository as generic Type">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added interface for Repository">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Look Both Ways - Nathan Moore (1).wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Look Both Ways - Nathan Moore.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall Butterflies - Asher Fulero.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
@@ -37,15 +42,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Aditya/IdeaProjects/capstone-project-jukebox",
-    "settings.editor.selected.configurable": "fileTemplates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aditya/IdeaProjects/capstone-project-jukebox&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
+      <module name="Jukebox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.jdp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,6 +82,8 @@
       <workItem from="1663673818940" duration="3946000" />
       <workItem from="1663686750910" duration="11000" />
       <workItem from="1663686946104" duration="516000" />
+      <workItem from="1663687965377" duration="2525000" />
+      <workItem from="1663690513695" duration="880000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -268,7 +295,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663677665435</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added connect method in DatabaseService class">
+      <created>1663688129545</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663688129546</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added print connect method in DatabaseService class">
+      <created>1663688158914</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1663688158914</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added interface for Repository">
+      <created>1663688194009</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1663688194009</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,9 +334,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created parameterized constructor in Song class" />
-    <MESSAGE value="created getter and setter method in Song class" />
-    <MESSAGE value="overridden equal() and hashCode() method in Song Class" />
     <MESSAGE value="overridden to string method in Song class" />
     <MESSAGE value="created Playlist class" />
     <MESSAGE value="created private attributes in Playlist class" />
@@ -311,7 +356,10 @@
     <MESSAGE value="added dependency for mysql in pom.xml" />
     <MESSAGE value="added dependency for junit test in pom.xml" />
     <MESSAGE value="made the Repository as generic Type" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the Repository as generic Type" />
+    <MESSAGE value="added connect method in DatabaseService class" />
+    <MESSAGE value="added print connect method in DatabaseService class" />
+    <MESSAGE value="added interface for Repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="added interface for Repository" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
