@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created instance for connect() method">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added dependency for mysql in pom.xml">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663673815505</updated>
-      <workItem from="1663673818940" duration="2201000" />
+      <workItem from="1663673818940" duration="2510000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -227,7 +227,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663675980036</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="created instance for printConnectionStatus() method">
+      <created>1663676028716</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1663676028716</updated>
+    </task>
+    <task id="LOCAL-00027" summary="created MusicPlayer class">
+      <created>1663676081572</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1663676081572</updated>
+    </task>
+    <task id="LOCAL-00028" summary="added dependency for mysql in pom.xml">
+      <created>1663676306901</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1663676306901</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,9 +266,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="changed the source and target jdk version from 18 to 11" />
-    <MESSAGE value="created Song class" />
     <MESSAGE value="created private attributes in Song class" />
     <MESSAGE value="created no args constructor in Song class" />
     <MESSAGE value="created parameterized constructor in Song class" />
@@ -270,7 +288,10 @@
     <MESSAGE value="created no args constructor for Connection object" />
     <MESSAGE value="created getter method for connection" />
     <MESSAGE value="created instance for connect() method" />
-    <option name="LAST_COMMIT_MESSAGE" value="created instance for connect() method" />
+    <MESSAGE value="created instance for printConnectionStatus() method" />
+    <MESSAGE value="created MusicPlayer class" />
+    <MESSAGE value="added dependency for mysql in pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dependency for mysql in pom.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
