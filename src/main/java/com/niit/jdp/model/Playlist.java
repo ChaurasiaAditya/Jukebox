@@ -48,4 +48,12 @@ public class Playlist {
     public int hashCode() {
         return Objects.hash(playlistName, song);
     }
+
+    @Override
+    public String toString() {
+        return "Playlist{" +
+                "playlistName='" + playlistName + '\'' +
+                ", song=" + song +
+                '}';
+    }
 }
