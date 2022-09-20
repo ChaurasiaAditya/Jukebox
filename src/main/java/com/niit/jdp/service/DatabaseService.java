@@ -21,4 +21,8 @@ public class DatabaseService {
     public Connection getConnection() {
         return connection;
     }
+
+    public boolean connect(){
+        return false;
+    }
 }
