@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Song {
     private int songNumber;
     private String songName;
-    private double duration;
+    private String duration;
     private String artist;
     private String genre;
     private String songUrl;
@@ -19,13 +19,12 @@ public class Song {
     public Song() {
     }
 
-    public Song(int songNumber, String songName, double duration, String artist, String genre, String songUrl) {
+    public Song(int songNumber, String songName, String artist, String genre, String duration) {
         this.songNumber = songNumber;
         this.songName = songName;
         this.duration = duration;
         this.artist = artist;
         this.genre = genre;
-        this.songUrl = songUrl;
     }
 
     public int getSongNumber() {
@@ -44,11 +43,11 @@ public class Song {
         this.songName = songName;
     }
 
-    public double getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(double duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
@@ -81,14 +80,13 @@ public class Song {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Song song = (Song) o;
-        return songNumber == song.songNumber && Double.compare(song.duration, duration) == 0 && Objects.equals(songName, song.songName) && Objects.equals(artist, song.artist) && Objects.equals(genre, song.genre) && Objects.equals(songUrl, song.songUrl);
+        return songNumber == song.songNumber && Objects.equals(songName, song.songName) && Objects.equals(duration, song.duration) && Objects.equals(artist, song.artist) && Objects.equals(genre, song.genre) && Objects.equals(songUrl, song.songUrl);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(songNumber, songName, duration, artist, genre, songUrl);
     }
-
 
     @Override
     public String toString() {

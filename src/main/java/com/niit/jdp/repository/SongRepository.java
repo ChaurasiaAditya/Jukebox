@@ -6,5 +6,60 @@
  */
 package com.niit.jdp.repository;
 
-public class SongRepository {
+import com.niit.jdp.model.Song;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class SongRepository implements Repository<Song> {
+
+    @Override
+
+    // This method is used to get all the songs from the database.
+    public List<Song> getAllSongs(Connection connection) throws SQLException {
+        // Create a list of songs
+        List<Song> songList = new ArrayList<>();
+
+        // write the query to get all the songs from the database
+        String query = "SELECT * FROM `jukebox`.`songs`;";
+
+        // create a statement object
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+        // execute the query
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        // iterate over the result set and add the songs to the list
+        while (resultSet.next()){
+            int songNumber = resultSet.getInt("song_number");
+            String songName = resultSet.getString("song_name");
+            String artist = resultSet.getString("artist");
+            String genre = resultSet.getString("genre");
+            String duration = resultSet.getString("duration");
+
+            // create a song object
+            Song song = new Song(songNumber,songName,artist,genre,duration);
+
+            // add the song to the list
+            songList.add(song);
+        }
+        // return the list
+        return songList;
+    }
+
+    @Override
+    public List<Song> getByArtist(Connection connection, String artist) {
+        return null;
+    }
+
+    @Override
+    public List<Song> getByGenre(Connection connection, String genre){
+        return null;
+    }
+
+    @Override
+    public List<Song> getBySongName(Connection connection, String songName) {
+        return null;
+    }
 }
