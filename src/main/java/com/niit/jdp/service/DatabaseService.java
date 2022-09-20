@@ -7,4 +7,7 @@
 package com.niit.jdp.service;
 
 public class DatabaseService {
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "root";
+    private static final String URL = "";
 }
