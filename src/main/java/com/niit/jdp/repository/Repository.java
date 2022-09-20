@@ -1,5 +1,7 @@
 package com.niit.jdp.repository;
 
-public interface Repository {
+import java.sql.Connection;
+import java.util.List;
 
+public interface Repository <T> {
 }

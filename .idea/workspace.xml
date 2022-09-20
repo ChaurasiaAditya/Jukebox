@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added dependency for mysql in pom.xml">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added dependency for junit test in pom.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663673815505</updated>
-      <workItem from="1663673818940" duration="2510000" />
+      <workItem from="1663673818940" duration="3784000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -248,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663676306901</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="added dependency for junit test in pom.xml">
+      <created>1663676369095</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1663676369095</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +274,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created private attributes in Song class" />
     <MESSAGE value="created no args constructor in Song class" />
     <MESSAGE value="created parameterized constructor in Song class" />
     <MESSAGE value="created getter and setter method in Song class" />
@@ -291,7 +298,8 @@
     <MESSAGE value="created instance for printConnectionStatus() method" />
     <MESSAGE value="created MusicPlayer class" />
     <MESSAGE value="added dependency for mysql in pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dependency for mysql in pom.xml" />
+    <MESSAGE value="added dependency for junit test in pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dependency for junit test in pom.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
