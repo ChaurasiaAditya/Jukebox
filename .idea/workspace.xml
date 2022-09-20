@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added dependency for junit test in pom.xml">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="made the Repository as generic Type">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Aditya/IdeaProjects/capstone-project-jukebox",
     "settings.editor.selected.configurable": "fileTemplates"
   }
 }]]></component>
@@ -51,7 +54,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663673815505</updated>
-      <workItem from="1663673818940" duration="3784000" />
+      <workItem from="1663673818940" duration="3946000" />
+      <workItem from="1663686750910" duration="11000" />
+      <workItem from="1663686946104" duration="516000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -256,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663676369095</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="made the Repository as generic Type">
+      <created>1663677665435</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1663677665435</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +286,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created no args constructor in Song class" />
     <MESSAGE value="created parameterized constructor in Song class" />
     <MESSAGE value="created getter and setter method in Song class" />
     <MESSAGE value="overridden equal() and hashCode() method in Song Class" />
@@ -299,7 +310,8 @@
     <MESSAGE value="created MusicPlayer class" />
     <MESSAGE value="added dependency for mysql in pom.xml" />
     <MESSAGE value="added dependency for junit test in pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dependency for junit test in pom.xml" />
+    <MESSAGE value="made the Repository as generic Type" />
+    <option name="LAST_COMMIT_MESSAGE" value="made the Repository as generic Type" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
