@@ -16,4 +16,13 @@ public class Song {
 
     public Song() {
     }
+
+    public Song(int songNumber, String songName, String songUrl, double duration, String artist, String genre) {
+        this.songNumber = songNumber;
+        this.songName = songName;
+        this.songUrl = songUrl;
+        this.duration = duration;
+        this.artist = artist;
+        this.genre = genre;
+    }
 }
