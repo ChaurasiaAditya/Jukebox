@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created parameterized constructor in Song class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created private attributes in Playlist class">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663673815505</updated>
-      <workItem from="1663673818940" duration="753000" />
+      <workItem from="1663673818940" duration="1221000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -93,7 +93,42 @@
       <option name="project" value="LOCAL" />
       <updated>1663674567696</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="created getter and setter method in Song class">
+      <created>1663674594213</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663674594213</updated>
+    </task>
+    <task id="LOCAL-00008" summary="overridden equal() and hashCode() method in Song Class">
+      <created>1663674639537</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663674639537</updated>
+    </task>
+    <task id="LOCAL-00009" summary="overridden to string method in Song class">
+      <created>1663674672472</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663674672472</updated>
+    </task>
+    <task id="LOCAL-00010" summary="created Playlist class">
+      <created>1663674699966</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663674699966</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created private attributes in Playlist class">
+      <created>1663674766430</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663674766430</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +152,12 @@
     <MESSAGE value="created private attributes in Song class" />
     <MESSAGE value="created no args constructor in Song class" />
     <MESSAGE value="created parameterized constructor in Song class" />
-    <option name="LAST_COMMIT_MESSAGE" value="created parameterized constructor in Song class" />
+    <MESSAGE value="created getter and setter method in Song class" />
+    <MESSAGE value="overridden equal() and hashCode() method in Song Class" />
+    <MESSAGE value="overridden to string method in Song class" />
+    <MESSAGE value="created Playlist class" />
+    <MESSAGE value="created private attributes in Playlist class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created private attributes in Playlist class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

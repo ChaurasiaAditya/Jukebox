@@ -9,4 +9,7 @@ package com.niit.jdp.model;
 public class Playlist {
     private String playlistName;
     private Song song;
+
+    public Playlist() {
+    }
 }
