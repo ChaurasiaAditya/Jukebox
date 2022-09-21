@@ -100,6 +100,12 @@ public class PlaylistRepository {
 		return playlistList;
 	}
 
+	/**
+	 * > This function gets all the playlists from the database and returns a list of playlist names
+	 *
+	 * @param connection The connection object that is used to connect to the database.
+	 * @return A list of playlists
+	 */
 	public List<String> getAllPlaylistNames(Connection connection) throws SQLException {
 		// Create a list of playlists
 		List<String> playlistNameList = new ArrayList<>();
@@ -121,5 +127,24 @@ public class PlaylistRepository {
 		return playlistNameList;
 	}
 
+	/**
+	 * It takes a connection object and a playlist name and deletes the playlist from the database
+	 *
+	 * @param connection The connection object to the database.
+	 * @param playlistId The id of the playlist
+	 * @return A boolean value.
+	 */
+	public boolean deletePlaylist(Connection connection, int playlistId) throws SQLException {
+		// write the query to delete the playlist
+		String query = "DELETE FROM `jukebox`.`playlists` WHERE (`id` = ?);";
 
+		// create a prepared statement object
+		PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+		// set the values to the query
+		preparedStatement.setInt(1, playlistId);
+
+		// execute the query
+		return preparedStatement.executeUpdate() > 0;
+	}
 }
