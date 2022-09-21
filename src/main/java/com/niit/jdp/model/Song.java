@@ -80,21 +80,23 @@ public class Song {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Song song = (Song) o;
-        return id == song.id && Objects.equals(name, song.name) && Objects.equals(duration, song.duration) && Objects.equals(artist, song.artist) && Objects.equals(genre, song.genre) && Objects.equals(songUrl, song.songUrl);
+        return getId() == song.getId() && Objects.equals(getName(), song.getName()) && Objects.equals(getDuration(), song.getDuration()) && Objects.equals(getArtist(), song.getArtist()) && Objects.equals(getGenre(), song.getGenre()) && Objects.equals(getSongUrl(), song.getSongUrl());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, duration, artist, genre, songUrl);
+        return Objects.hash(getId(), getName(), getDuration(), getArtist(), getGenre(), getSongUrl());
     }
 
     @Override
     public String toString() {
-        return  getId() +"  "+
-                getName() + '\'' +
-                getArtist() + '\'' +
-                getGenre() +
-                getDuration() + '\'' +
-                "\n";
+        return "Song{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", duration='" + getDuration() + '\'' +
+                ", artist='" + getArtist() + '\'' +
+                ", genre='" + getGenre() + '\'' +
+                ", songUrl='" + getSongUrl() + '\'' +
+                '}';
     }
 }

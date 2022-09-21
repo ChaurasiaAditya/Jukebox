@@ -6,18 +6,30 @@
  */
 package com.niit.jdp.model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Playlist {
+    private int id;
     private String playlistName;
-    private Song song;
+    private List<Song> songList;
+
 
     public Playlist() {
     }
 
-    public Playlist(String playlistName, Song song) {
+    public Playlist(int id, String playlistName, List<Song> songList) {
+        this.id = id;
         this.playlistName = playlistName;
-        this.song = song;
+        this.songList = songList;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPlaylistName() {
@@ -28,12 +40,12 @@ public class Playlist {
         this.playlistName = playlistName;
     }
 
-    public Song getSong() {
-        return song;
+    public List<Song> getSongList() {
+        return songList;
     }
 
-    public void setSong(Song song) {
-        this.song = song;
+    public void setSongList(List<Song> songList) {
+        this.songList = songList;
     }
 
     @Override
@@ -41,19 +53,20 @@ public class Playlist {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Playlist playlist = (Playlist) o;
-        return Objects.equals(playlistName, playlist.playlistName) && Objects.equals(song, playlist.song);
+        return getId() == playlist.getId() && Objects.equals(getPlaylistName(), playlist.getPlaylistName()) && Objects.equals(getSongList(), playlist.getSongList());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(playlistName, song);
+        return Objects.hash(getId(), getPlaylistName(), getSongList());
     }
 
     @Override
     public String toString() {
         return "Playlist{" +
-                "playlistName='" + playlistName + '\'' +
-                ", song=" + song +
-                '}';
+            "id=" + getId() +
+            ", playlistName='" + getPlaylistName() + '\'' +
+            ", songList=" + getSongList() +
+            '}';
     }
 }
