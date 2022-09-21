@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="Added the Main method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main1.java" afterDir="false" />
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="updated song player service class">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -17,11 +16,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongPlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,21 +147,7 @@
       <workItem from="1663778418633" duration="8773000" />
       <workItem from="1663787309301" duration="562000" />
       <workItem from="1663787899878" duration="30000" />
-      <workItem from="1663787952489" duration="3863000" />
-    </task>
-    <task id="LOCAL-00039" summary="added method to get all the songs from database by song name">
-      <created>1663703272622</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1663703272622</updated>
-    </task>
-    <task id="LOCAL-00040" summary="created database_queries.sql in resources">
-      <created>1663704203057</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1663704203057</updated>
+      <workItem from="1663787952489" duration="4048000" />
     </task>
     <task id="LOCAL-00041" summary="written query to create a database in database_queries.sql in resources">
       <created>1663704258404</created>
@@ -497,7 +478,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663791796638</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="updated song player service class">
+      <created>1663791849193</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791849193</updated>
+    </task>
+    <task id="LOCAL-00089" summary="updated song player service class">
+      <created>1663791893334</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791893334</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created add_song7_query.sql" />
     <MESSAGE value="created add_song8_query.sql" />
     <MESSAGE value="created add_song9_query.sql" />
     <MESSAGE value="created add_song10_query.sql" />
@@ -540,7 +534,8 @@
     <MESSAGE value="added method to get all the playlist available in database" />
     <MESSAGE value="added method to delete the playlist from database" />
     <MESSAGE value="Added the Main method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the Main method" />
+    <MESSAGE value="updated song player service class" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated song player service class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

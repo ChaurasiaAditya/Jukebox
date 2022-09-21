@@ -135,7 +135,7 @@ public class Main {
 						displayService.displayPlaylists(allPlaylistNames);
 
 						System.out.println("Enter the playlist id to view the songs in the Playlist : ");
-						int playlistId = scanner.nextInt();
+						// int playlistId = scanner.nextInt();
 						// Get all songs in playlist by playlist id from the database
 						List<Playlist> songsInPlaylist = playlistRepository.getAllSongsInPlaylist(connection);
 						// Display all the songs
@@ -148,8 +148,7 @@ public class Main {
 			} while (counter != 5);
 
 
-		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException |
-				 InterruptedException exception) {
+		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException exception) {
 			System.out.println(exception.getMessage());
 		}
 	}

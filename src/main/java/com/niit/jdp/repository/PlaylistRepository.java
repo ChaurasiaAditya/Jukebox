@@ -43,13 +43,14 @@ public class PlaylistRepository {
 		String query = "INSERT INTO `jukebox`.`playlists` (`name`, `songs_list`) VALUES (?, ?);";
 
 		// create a prepared statement object
-		PreparedStatement preparedStatement = connection.prepareStatement(query);
-		// set the values to the query
-		preparedStatement.setString(1, playlistName);
-		preparedStatement.setString(2, stringJoiner.toString().trim());
+		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+			// set the values to the query
+			preparedStatement.setString(1, playlistName);
+			preparedStatement.setString(2, stringJoiner.toString().trim());
 
-		// execute the query
-		return preparedStatement.executeUpdate() > 0;
+			// execute the query
+			return preparedStatement.executeUpdate() > 0;
+		}
 	}
 
 	/**
@@ -67,10 +68,12 @@ public class PlaylistRepository {
 		String query = "SELECT * FROM `jukebox`.`playlists`;";
 
 		// create a prepared statement object
-		PreparedStatement preparedStatement = connection.prepareStatement(query);
+		ResultSet resultSet;
+		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-		// execute the query
-		ResultSet resultSet = preparedStatement.executeQuery();
+			// execute the query
+			resultSet = preparedStatement.executeQuery();
+		}
 
 		// iterate over the result set and add the playlists to the list
 		while (resultSet.next()) {
@@ -114,10 +117,12 @@ public class PlaylistRepository {
 		String query = "SELECT `id`,`name` FROM `jukebox`.`playlists`;";
 
 		// create a prepared statement object
-		PreparedStatement preparedStatement = connection.prepareStatement(query);
+		ResultSet resultSet;
+		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-		// execute the query
-		ResultSet resultSet = preparedStatement.executeQuery();
+			// execute the query
+			resultSet = preparedStatement.executeQuery();
+		}
 
 		// iterate over the result set and add the playlists to the list
 		while (resultSet.next()) {
@@ -139,12 +144,13 @@ public class PlaylistRepository {
 		String query = "DELETE FROM `jukebox`.`playlists` WHERE (`id` = ?);";
 
 		// create a prepared statement object
-		PreparedStatement preparedStatement = connection.prepareStatement(query);
+		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-		// set the values to the query
-		preparedStatement.setInt(1, playlistId);
+			// set the values to the query
+			preparedStatement.setInt(1, playlistId);
 
-		// execute the query
-		return preparedStatement.executeUpdate() > 0;
+			// execute the query
+			return preparedStatement.executeUpdate() > 0;
+		}
 	}
 }
