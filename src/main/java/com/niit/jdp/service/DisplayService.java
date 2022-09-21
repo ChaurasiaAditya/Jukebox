@@ -12,6 +12,11 @@ import java.util.List;
 
 public class DisplayService {
 
+    /**
+     * This function displays the song catalogue in a tabular format
+     *
+     * @param songList The list of songs to be displayed
+     */
     public void displayCatalogue(List<Song> songList) {
         System.out.println("========================================================");
         System.out.println("====================SONG CATALOGUE======================");
@@ -20,6 +25,9 @@ public class DisplayService {
                 song.getArtist() + "\t\t" + song.getGenre() + "\t\t" + song.getDuration()));
     }
 
+    /**
+     * This function displays the main menu of the program
+     */
     public void displayMainMenu(){
         System.out.println("===================================");
         System.out.println("===========MAIN MENU===============");
@@ -33,11 +41,16 @@ public class DisplayService {
         System.out.println("===================================");
         System.out.print("Enter your choice: ");
     }
+
+    /**
+     * This function takes a list of strings as a parameter and prints out the list of strings
+     *
+     * @param playlistList A list of playlist names
+     */
     public void displayPlaylists(List<String> playlistList){
         System.out.println("===================================");
         System.out.println("===========PLAYLISTS===============");
         playlistList.forEach(System.out::println);
         System.out.println("===================================");
     }
-
 }
