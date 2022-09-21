@@ -99,4 +99,27 @@ public class PlaylistRepository {
 		// return the list of playlists
 		return playlistList;
 	}
+
+	public List<String> getAllPlaylistNames(Connection connection) throws SQLException {
+		// Create a list of playlists
+		List<String> playlistNameList = new ArrayList<>();
+
+		// write the query to get all the playlists from the database
+		String query = "SELECT `id`,`name` FROM `jukebox`.`playlists`;";
+
+		// create a prepared statement object
+		PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+		// execute the query
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		// iterate over the result set and add the playlists to the list
+		while (resultSet.next()) {
+			playlistNameList.add(resultSet.getInt("id") + "\t" + resultSet.getString("name"));
+		}
+		// return the list of playlists
+		return playlistNameList;
+	}
+
+
 }
