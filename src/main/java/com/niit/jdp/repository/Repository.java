@@ -18,7 +18,7 @@ public interface Repository <T> {
     T getByName(Connection connection, String name) throws SQLException;
 
     // Update T
-    boolean updateById(Connection connection, int id) throws SQLException;
+    boolean updateById(Connection connection, int id, String name) throws SQLException;
 
     // Delete T
     boolean deleteById(Connection connection, int id) throws SQLException;

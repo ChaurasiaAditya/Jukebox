@@ -18,6 +18,7 @@ import java.util.List;
 public class SongRepository implements Repository<Song> {
 
     @Override
+    // This method is used to add the song to the database.
     public boolean add(Connection connection, Song song) throws SQLException {
 
         // write the query to insert the song into the song table
@@ -195,8 +196,25 @@ public class SongRepository implements Repository<Song> {
     }
 
     @Override
-    public boolean updateById(Connection connection, int id) throws SQLException {
-        return false;
+    // This method is used to update the song name by id.
+    public boolean updateById(Connection connection, int id, String name) throws SQLException {
+
+        // write the query to update the song by id
+        String query = "UPDATE `jukebox`.`songs` SET `name` = ? WHERE (`id` = ?);";
+
+        int numberOfRowsAffected;
+        // create a statement object using the connection object
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            // set the value in prepared statement
+            preparedStatement.setString(1, name);
+            preparedStatement.setInt(2, id);
+
+            // execute the query
+            numberOfRowsAffected = preparedStatement.executeUpdate();
+        }
+        // return true if the number of rows affected is greater than 0
+        return numberOfRowsAffected > 0;
     }
 
     @Override
