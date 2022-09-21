@@ -218,7 +218,22 @@ public class SongRepository implements Repository<Song> {
     }
 
     @Override
+    // This method is used to delete the song by id.
     public boolean deleteById(Connection connection, int id) throws SQLException {
-        return false;
+        // write the query to delete the song by id
+        String query = "DELETE FROM `jukebox`.`songs` WHERE (`id` = ?);";
+
+        int numberOfRowsAffected;
+        // create a statement object using the connection object
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            // set the value in prepared statement
+            preparedStatement.setInt(1, id);
+
+            // execute the query
+            numberOfRowsAffected = preparedStatement.executeUpdate();
+        }
+        // return true if the number of rows affected is greater than 0
+        return numberOfRowsAffected > 0;
     }
 }
