@@ -38,9 +38,9 @@ public class DatabaseService {
      */
     public void printConnectionStatus() {
         if (connection != null) {
-            System.out.println("Connected to the database");
+            System.out.println("\u001B[32m Connected to the database\u001B[0m");
         } else {
-            System.out.println("Failed to make connection!");
+            System.err.println("Failed to make connection!");
         }
     }
 }

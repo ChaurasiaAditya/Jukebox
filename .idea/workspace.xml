@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="updated the to string in Playlist class">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="Added the Main method">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main1.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
@@ -18,11 +18,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongPlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" beforeDir="false" />
@@ -156,49 +152,7 @@
       <workItem from="1663778418633" duration="8773000" />
       <workItem from="1663787309301" duration="562000" />
       <workItem from="1663787899878" duration="30000" />
-      <workItem from="1663787952489" duration="3247000" />
-    </task>
-    <task id="LOCAL-00033" summary="added interface for Repository">
-      <created>1663688194009</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1663688194009</updated>
-    </task>
-    <task id="LOCAL-00034" summary="updated the to string method in song">
-      <created>1663697226087</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1663697226087</updated>
-    </task>
-    <task id="LOCAL-00035" summary="added the java docs in DatabaseService">
-      <created>1663697424888</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1663697424888</updated>
-    </task>
-    <task id="LOCAL-00036" summary="added method to get all the songs from database">
-      <created>1663701216453</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1663701216453</updated>
-    </task>
-    <task id="LOCAL-00037" summary="added method to get all the songs from database by artist">
-      <created>1663702604182</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1663702604182</updated>
-    </task>
-    <task id="LOCAL-00038" summary="added method to get all the songs from database by genre">
-      <created>1663703029153</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1663703029153</updated>
+      <workItem from="1663787952489" duration="3863000" />
     </task>
     <task id="LOCAL-00039" summary="added method to get all the songs from database by song name">
       <created>1663703272622</created>
@@ -501,7 +455,49 @@
       <option name="project" value="LOCAL" />
       <updated>1663788748650</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="added display main menu method in DisplayService class">
+      <created>1663791461585</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791461586</updated>
+    </task>
+    <task id="LOCAL-00083" summary="added display play Lists method in DisplayService class">
+      <created>1663791491251</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791491251</updated>
+    </task>
+    <task id="LOCAL-00084" summary="added java docs">
+      <created>1663791562376</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791562376</updated>
+    </task>
+    <task id="LOCAL-00085" summary="added method to get all the playlist available in database">
+      <created>1663791657073</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791657073</updated>
+    </task>
+    <task id="LOCAL-00086" summary="added method to delete the playlist from database">
+      <created>1663791746918</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791746918</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Added the Main method">
+      <created>1663791796638</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1663791796638</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,12 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created add_song1_query.sql" />
-    <MESSAGE value="created add_song2_query.sql" />
-    <MESSAGE value="created add_song3_query.sql" />
-    <MESSAGE value="created add_song4_query.sql" />
-    <MESSAGE value="created add_song5_query.sql" />
-    <MESSAGE value="created add_song6_query.sql" />
     <MESSAGE value="created add_song7_query.sql" />
     <MESSAGE value="created add_song8_query.sql" />
     <MESSAGE value="created add_song9_query.sql" />
@@ -544,7 +534,13 @@
     <MESSAGE value="added method to add songs in Playlist" />
     <MESSAGE value="added docs in SongRepository" />
     <MESSAGE value="updated the to string in Playlist class" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the to string in Playlist class" />
+    <MESSAGE value="added display main menu method in DisplayService class" />
+    <MESSAGE value="added display play Lists method in DisplayService class" />
+    <MESSAGE value="added java docs" />
+    <MESSAGE value="added method to get all the playlist available in database" />
+    <MESSAGE value="added method to delete the playlist from database" />
+    <MESSAGE value="Added the Main method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the Main method" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -32,9 +32,14 @@ public class SongPlayerService {
 			// open audioInputStream to the clip
 			clip.open(audioInputStream);
 
-			while (true) {
-				System.out.println("\n1. Pause\t 2. Resume\t 3. Restart\t 4. Stop\t 5. Exit");
-				int choice = scanner.nextInt();
+			// start the clip
+			clip.start();
+
+			int choice;
+			do {
+				System.out.println("\nEnter 1. Pause\t 2. Resume\t 3. Restart\t 4.Back to Main Menu");
+				System.out.print("Enter your choice: ");
+				choice = scanner.nextInt();
 				switch (choice) {
 					case 1:
 						clip.stop();
@@ -49,16 +54,10 @@ public class SongPlayerService {
 						clip.stop();
 						clip.close();
 						break;
-					case 5:
-						clip.stop();
-						clip.close();
-						System.exit(0);
-						break;
 					default:
 						System.out.println("Invalid choice");
-						scanner.close();
 				}
-			}
+			}while (choice != 4);
 		}
 	}
 }
