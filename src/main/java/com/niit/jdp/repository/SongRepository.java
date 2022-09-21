@@ -1,7 +1,7 @@
 /*
  * Author Name: Aditya Chaurasia
  * Date: 20-09-2022
- * Created With: IntelliJ IDEA Community Edition
+ * Created With: IntelliJ IDEA Ultimate
  * Profile: github.com/ChaurasiaAditya
  */
 package com.niit.jdp.repository;
@@ -18,7 +18,6 @@ import java.util.List;
 public class SongRepository implements Repository<Song> {
 
     @Override
-
     // This method is used to get all the songs from the database.
     public List<Song> getAllSongs(Connection connection) throws SQLException {
         // Create a list of songs

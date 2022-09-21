@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added method to get all the songs from database by song name">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="written query to Add the songs details in Database">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,8 +16,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +98,7 @@
       <workItem from="1663696947608" duration="2091000" />
       <workItem from="1663700870609" duration="444000" />
       <workItem from="1663701332802" duration="332000" />
-      <workItem from="1663701685437" duration="2486000" />
+      <workItem from="1663701685437" duration="2783000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -375,7 +373,42 @@
       <option name="project" value="LOCAL" />
       <updated>1663703272622</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="created database_queries.sql in resources">
+      <created>1663704203057</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1663704203057</updated>
+    </task>
+    <task id="LOCAL-00041" summary="written query to create a database in database_queries.sql in resources">
+      <created>1663704258404</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1663704258404</updated>
+    </task>
+    <task id="LOCAL-00042" summary="written query to Use database">
+      <created>1663704280168</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1663704280168</updated>
+    </task>
+    <task id="LOCAL-00043" summary="written query to create a table in the database">
+      <created>1663704303965</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1663704303965</updated>
+    </task>
+    <task id="LOCAL-00044" summary="written query to Add the songs details in Database">
+      <created>1663704330101</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1663704330101</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,11 +426,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="overridden equal and hashCode method in Playlist class" />
-    <MESSAGE value="overridden to string method in Playlist class" />
-    <MESSAGE value="created songRepository interface" />
-    <MESSAGE value="created Repository interface" />
-    <MESSAGE value="created song repository class" />
     <MESSAGE value="created PlaylistRepository class" />
     <MESSAGE value="created DatabaseService class" />
     <MESSAGE value="created private fields in DatabaseService class" />
@@ -418,7 +446,12 @@
     <MESSAGE value="added method to get all the songs from database by artist" />
     <MESSAGE value="added method to get all the songs from database by genre" />
     <MESSAGE value="added method to get all the songs from database by song name" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method to get all the songs from database by song name" />
+    <MESSAGE value="created database_queries.sql in resources" />
+    <MESSAGE value="written query to create a database in database_queries.sql in resources" />
+    <MESSAGE value="written query to Use database" />
+    <MESSAGE value="written query to create a table in the database" />
+    <MESSAGE value="written query to Add the songs details in Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="written query to Add the songs details in Database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
