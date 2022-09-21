@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created the method to delete row name in to the database by id">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created add_song11_query.sql">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayerService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,26 +18,15 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song10_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song11_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song1_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song2_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song3_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song4_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song5_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song6_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song7_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song8_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song9_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/create_database_query.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/create_table_query.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/677165ec-623f-43f5-a127-e39c9ab3fdd5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/677165ec-623f-43f5-a127-e39c9ab3fdd5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,30 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Aditya/IdeaProjects/Jukebox/src/main/resources/sql/song",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aditya/IdeaProjects/Jukebox/src/main/resources/sql/song&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Aditya\IdeaProjects\Jukebox\src\main\resources\sql\song" />
       <recent name="C:\Users\Aditya\IdeaProjects\Jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
       <module name="Jukebox" />
@@ -101,8 +92,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main1" />
+      <module name="Jukebox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.jdp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -127,98 +132,9 @@
       <workItem from="1663732001133" duration="4934000" />
       <workItem from="1663736978390" duration="1288000" />
       <workItem from="1663738277405" duration="354000" />
-      <workItem from="1663738657033" duration="1965000" />
-    </task>
-    <task id="LOCAL-00002" summary="changed the source and target jdk version from 18 to 11">
-      <created>1663673908089</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1663673908089</updated>
-    </task>
-    <task id="LOCAL-00003" summary="created Song class">
-      <created>1663674352731</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674352731</updated>
-    </task>
-    <task id="LOCAL-00004" summary="created private attributes in Song class">
-      <created>1663674498677</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674498677</updated>
-    </task>
-    <task id="LOCAL-00005" summary="created no args constructor in Song class">
-      <created>1663674531361</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674531361</updated>
-    </task>
-    <task id="LOCAL-00006" summary="created parameterized constructor in Song class">
-      <created>1663674567696</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674567696</updated>
-    </task>
-    <task id="LOCAL-00007" summary="created getter and setter method in Song class">
-      <created>1663674594213</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674594213</updated>
-    </task>
-    <task id="LOCAL-00008" summary="overridden equal() and hashCode() method in Song Class">
-      <created>1663674639537</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674639537</updated>
-    </task>
-    <task id="LOCAL-00009" summary="overridden to string method in Song class">
-      <created>1663674672472</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674672472</updated>
-    </task>
-    <task id="LOCAL-00010" summary="created Playlist class">
-      <created>1663674699966</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674699966</updated>
-    </task>
-    <task id="LOCAL-00011" summary="created private attributes in Playlist class">
-      <created>1663674766430</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1663674766430</updated>
-    </task>
-    <task id="LOCAL-00012" summary="created no args Constructor in Playlist class">
-      <created>1663675048042</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675048042</updated>
-    </task>
-    <task id="LOCAL-00013" summary="created parameterised Constructor in Playlist class">
-      <created>1663675067861</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675067861</updated>
-    </task>
-    <task id="LOCAL-00014" summary="created getter and setter in Playlist class">
-      <created>1663675114908</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675114908</updated>
+      <workItem from="1663738657033" duration="5115000" />
+      <workItem from="1663744722303" duration="178000" />
+      <workItem from="1663744925903" duration="4414000" />
     </task>
     <task id="LOCAL-00015" summary="overridden equal and hashCode method in Playlist class">
       <created>1663675172755</created>
@@ -472,7 +388,98 @@
       <option name="project" value="LOCAL" />
       <updated>1663738088573</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="created create_database_query.sql">
+      <created>1663741204878</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741204879</updated>
+    </task>
+    <task id="LOCAL-00052" summary="created_table_query.sql">
+      <created>1663741267959</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741267959</updated>
+    </task>
+    <task id="LOCAL-00053" summary="created add_song1_query.sql">
+      <created>1663741289650</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741289650</updated>
+    </task>
+    <task id="LOCAL-00054" summary="created add_song2_query.sql">
+      <created>1663741301746</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741301746</updated>
+    </task>
+    <task id="LOCAL-00055" summary="created add_song3_query.sql">
+      <created>1663741311982</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741311982</updated>
+    </task>
+    <task id="LOCAL-00056" summary="created add_song4_query.sql">
+      <created>1663741322191</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741322192</updated>
+    </task>
+    <task id="LOCAL-00057" summary="created add_song5_query.sql">
+      <created>1663741332726</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741332726</updated>
+    </task>
+    <task id="LOCAL-00058" summary="created add_song6_query.sql">
+      <created>1663741342853</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741342853</updated>
+    </task>
+    <task id="LOCAL-00059" summary="created add_song7_query.sql">
+      <created>1663741356490</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741356490</updated>
+    </task>
+    <task id="LOCAL-00060" summary="created add_song8_query.sql">
+      <created>1663741368547</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741368547</updated>
+    </task>
+    <task id="LOCAL-00061" summary="created add_song9_query.sql">
+      <created>1663741378685</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741378685</updated>
+    </task>
+    <task id="LOCAL-00062" summary="created add_song10_query.sql">
+      <created>1663741390259</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741390259</updated>
+    </task>
+    <task id="LOCAL-00063" summary="created add_song11_query.sql">
+      <created>1663741432018</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1663741432018</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,19 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created getter method for connection" />
-    <MESSAGE value="created instance for connect() method" />
-    <MESSAGE value="created instance for printConnectionStatus() method" />
-    <MESSAGE value="created MusicPlayer class" />
-    <MESSAGE value="added dependency for mysql in pom.xml" />
-    <MESSAGE value="added dependency for junit test in pom.xml" />
-    <MESSAGE value="made the Repository as generic Type" />
-    <MESSAGE value="added connect method in DatabaseService class" />
-    <MESSAGE value="added print connect method in DatabaseService class" />
-    <MESSAGE value="added interface for Repository" />
-    <MESSAGE value="updated the to string method in song" />
-    <MESSAGE value="added the java docs in DatabaseService" />
-    <MESSAGE value="added method to get all the songs from database" />
     <MESSAGE value="added method to get all the songs from database by artist" />
     <MESSAGE value="added method to get all the songs from database by genre" />
     <MESSAGE value="added method to get all the songs from database by song name" />
@@ -515,7 +509,20 @@
     <MESSAGE value="created the method to add songs in to the database" />
     <MESSAGE value="created the method to update song name in to the database" />
     <MESSAGE value="created the method to delete row name in to the database by id" />
-    <option name="LAST_COMMIT_MESSAGE" value="created the method to delete row name in to the database by id" />
+    <MESSAGE value="created create_database_query.sql" />
+    <MESSAGE value="created_table_query.sql" />
+    <MESSAGE value="created add_song1_query.sql" />
+    <MESSAGE value="created add_song2_query.sql" />
+    <MESSAGE value="created add_song3_query.sql" />
+    <MESSAGE value="created add_song4_query.sql" />
+    <MESSAGE value="created add_song5_query.sql" />
+    <MESSAGE value="created add_song6_query.sql" />
+    <MESSAGE value="created add_song7_query.sql" />
+    <MESSAGE value="created add_song8_query.sql" />
+    <MESSAGE value="created add_song9_query.sql" />
+    <MESSAGE value="created add_song10_query.sql" />
+    <MESSAGE value="created add_song11_query.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="created add_song11_query.sql" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

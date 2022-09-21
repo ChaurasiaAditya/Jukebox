@@ -22,4 +22,6 @@ public interface Repository <T> {
 
     // Delete T
     boolean deleteById(Connection connection, int id) throws SQLException;
+
+    String getUrlById(Connection connection, int id) throws SQLException;
 }

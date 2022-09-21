@@ -236,4 +236,18 @@ public class SongRepository implements Repository<Song> {
         // return true if the number of rows affected is greater than 0
         return numberOfRowsAffected > 0;
     }
+
+    public String getUrlById(Connection connection, int id) throws SQLException {
+        String url = "";
+        String query = "SELECT `url` FROM `jukebox`.`songs` WHERE (`id` = ?);";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                url = resultSet.getString("url");
+            }
+        }
+        return url;
+    }
 }
