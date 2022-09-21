@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added the java doc in SongRepository class">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="updated the to string in Playlist class">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main1.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
@@ -17,15 +17,12 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/677165ec-623f-43f5-a127-e39c9ab3fdd5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/677165ec-623f-43f5-a127-e39c9ab3fdd5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongPlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" beforeDir="false" />
@@ -159,49 +156,7 @@
       <workItem from="1663778418633" duration="8773000" />
       <workItem from="1663787309301" duration="562000" />
       <workItem from="1663787899878" duration="30000" />
-      <workItem from="1663787952489" duration="357000" />
-    </task>
-    <task id="LOCAL-00027" summary="created MusicPlayer class">
-      <created>1663676081572</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1663676081572</updated>
-    </task>
-    <task id="LOCAL-00028" summary="added dependency for mysql in pom.xml">
-      <created>1663676306901</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1663676306901</updated>
-    </task>
-    <task id="LOCAL-00029" summary="added dependency for junit test in pom.xml">
-      <created>1663676369095</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1663676369095</updated>
-    </task>
-    <task id="LOCAL-00030" summary="made the Repository as generic Type">
-      <created>1663677665435</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1663677665435</updated>
-    </task>
-    <task id="LOCAL-00031" summary="added connect method in DatabaseService class">
-      <created>1663688129545</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1663688129546</updated>
-    </task>
-    <task id="LOCAL-00032" summary="added print connect method in DatabaseService class">
-      <created>1663688158914</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1663688158914</updated>
+      <workItem from="1663787952489" duration="3247000" />
     </task>
     <task id="LOCAL-00033" summary="added interface for Repository">
       <created>1663688194009</created>
@@ -504,7 +459,49 @@
       <option name="project" value="LOCAL" />
       <updated>1663788201003</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="added method to get all songs in Playlist database">
+      <created>1663788380335</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1663788380335</updated>
+    </task>
+    <task id="LOCAL-00077" summary="added method to add songs in Playlist">
+      <created>1663788422757</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1663788422757</updated>
+    </task>
+    <task id="LOCAL-00078" summary="added method to add songs in Playlist">
+      <created>1663788503417</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1663788503417</updated>
+    </task>
+    <task id="LOCAL-00079" summary="added method to add songs in Playlist">
+      <created>1663788531234</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1663788531234</updated>
+    </task>
+    <task id="LOCAL-00080" summary="added docs in SongRepository">
+      <created>1663788579620</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1663788579620</updated>
+    </task>
+    <task id="LOCAL-00081" summary="updated the to string in Playlist class">
+      <created>1663788748650</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1663788748650</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,11 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created the method to add songs in to the database" />
-    <MESSAGE value="created the method to update song name in to the database" />
-    <MESSAGE value="created the method to delete row name in to the database by id" />
-    <MESSAGE value="created create_database_query.sql" />
-    <MESSAGE value="created_table_query.sql" />
     <MESSAGE value="created add_song1_query.sql" />
     <MESSAGE value="created add_song2_query.sql" />
     <MESSAGE value="created add_song3_query.sql" />
@@ -547,7 +539,12 @@
     <MESSAGE value="added query in create_table_query.sql" />
     <MESSAGE value="added query in  create_table_query.sql" />
     <MESSAGE value="added the java doc in SongRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the java doc in SongRepository class" />
+    <MESSAGE value="added method to get all songs in Playlist" />
+    <MESSAGE value="added method to get all songs in Playlist database" />
+    <MESSAGE value="added method to add songs in Playlist" />
+    <MESSAGE value="added docs in SongRepository" />
+    <MESSAGE value="updated the to string in Playlist class" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the to string in Playlist class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -19,4 +19,19 @@ public class DisplayService {
         songList.forEach(song -> System.out.println(song.getId() + "\t\t" + song.getName() + "\t\t" +
                 song.getArtist() + "\t\t" + song.getGenre() + "\t\t" + song.getDuration()));
     }
+
+    public void displayMainMenu(){
+        System.out.println("===================================");
+        System.out.println("===========MAIN MENU===============");
+        System.out.println("1. Display all of Songs");
+        System.out.println("2. Display all songs by artist");
+        System.out.println("3. Display all songs by genre");
+        System.out.println("4. Search a song by name");
+        System.out.println("5. Add a playlist");
+        System.out.println("6. View all playlist");
+        System.out.println("7. Exit");
+        System.out.println("===================================");
+        System.out.print("Enter your choice: ");
+    }
+
 }
