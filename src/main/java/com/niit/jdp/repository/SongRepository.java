@@ -17,10 +17,16 @@ import java.util.List;
 
 public class SongRepository implements Repository<Song> {
 
+	/**
+	 * This method is used to add the song to the database.
+	 *
+	 * @param connection connection object
+	 * @param song       song object
+	 * @return true if the song is added
+	 * @throws SQLException sql exception
+	 */
 	@Override
-	// This method is used to add the song to the database.
 	public boolean add(Connection connection, Song song) throws SQLException {
-
 		// write the query to insert the song into the song table
 		String query = "INSERT INTO `jukebox`.`songs` (`id`, `name`, `artist`, `duration`, `genre`, `url`) VALUES (?, ?, ?, ?, ?, ?);";
 
@@ -42,8 +48,15 @@ public class SongRepository implements Repository<Song> {
 		return numberOfRowsAffected > 0;
 	}
 
+
+	/**
+	 * This method is used to get all the songs from the database.
+	 *
+	 * @param connection connection object
+	 * @return list of songs
+	 * @throws SQLException sql exception
+	 */
 	@Override
-	// This method is used to get all the songs from the database.
 	public List<Song> getAll(Connection connection) throws SQLException {
 		// Create a list of songs
 		List<Song> songList = new ArrayList<>();
@@ -79,8 +92,9 @@ public class SongRepository implements Repository<Song> {
 
 	/**
 	 * This method is used to get the song from the database by id.
+	 *
 	 * @param connection the connection
-	 * @param artist    name of the artist
+	 * @param artist     name of the artist
 	 * @return the song
 	 * @throws SQLException the sql exception
 	 */
@@ -123,13 +137,13 @@ public class SongRepository implements Repository<Song> {
 
 	/**
 	 * This method is used to get all the songs from the database by genre.
+	 *
 	 * @param connection the connection object
-	 * @param genre 	the genre of the song
+	 * @param genre      the genre of the song
 	 * @return List of songs
 	 * @throws SQLException sql exception
 	 */
 	@Override
-
 	public List<Song> getByGenre(Connection connection, String genre) throws SQLException {
 		// Create a list of songs
 		List<Song> songList = new ArrayList<>();
@@ -168,26 +182,36 @@ public class SongRepository implements Repository<Song> {
 
 	/**
 	 * This method is used to get all the songs from the database by duration.
+	 *
 	 * @param connection connection object
-	 * @param id id of the song
+	 * @param id         id of the song
 	 * @return Song Object
 	 * @throws SQLException sql exception
 	 */
 	public Song geyById(Connection connection, int id) throws SQLException {
 
+		// call the getAll method to get all the songs from the database
 		List<Song> songs = getAll(connection);
+
+		//create a song object
 		Song songById = new Song();
+
+		// iterate over the list and get the song by id
 		for (Song song : songs) {
 			if (song.getId() == id) {
+				// set the song object
 				songById = song;
 			}
 		}
+		// return the song object
 		return songById;
 	}
 
-	/** This method is used to get all the songs from the database by duration.
+	/**
+	 * This method is used to get all the songs from the database by duration.
+	 *
 	 * @param connection connection object
-	 * @param name  name of the song to search
+	 * @param name       name of the song to search
 	 * @return List of songs
 	 * @throws SQLException sql exception
 	 */
@@ -232,9 +256,10 @@ public class SongRepository implements Repository<Song> {
 
 	/**
 	 * This method is used to get all the songs from the database by duration.
+	 *
 	 * @param connection connection object
-	 * @param id id of the song
-	 * @param name  updated name of the song
+	 * @param id         id of the song
+	 * @param name       updated name of the song
 	 * @return List of songs
 	 * @throws SQLException sql exception
 	 */
@@ -259,11 +284,11 @@ public class SongRepository implements Repository<Song> {
 		return numberOfRowsAffected > 0;
 	}
 
-
 	/**
 	 * This method is used to delete the song from the database by id.
+	 *
 	 * @param connection connection object
-	 * @param id id of the song
+	 * @param id         id of the song
 	 * @return true if the song is deleted
 	 * @throws SQLException sql exception
 	 */
@@ -286,29 +311,29 @@ public class SongRepository implements Repository<Song> {
 		return numberOfRowsAffected > 0;
 	}
 
-
 	/**
 	 * This function takes a connection object and an id as input and returns the url of the song with the given id
+	 *
 	 * @param connection The connection object that is used to connect to the database.
-	 * @param id The id of the song
+	 * @param id         The id of the song
 	 * @return The url of the song with the given id.
 	 */
 	public String getUrlById(Connection connection, int id) throws SQLException {
 		String url = null;
 
-        // write the query to get the url by id
+		// write the query to get the url by id
 		String query = "SELECT `url` FROM `jukebox`.`songs` WHERE (`id` = ?);";
 
-        // create a Prepared statement object using the connection object
+		// create a Prepared statement object using the connection object
 		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-            // set the value in prepared statement
+			// set the value in prepared statement
 			preparedStatement.setInt(1, id);
 
-            // execute the query
+			// execute the query
 			ResultSet resultSet = preparedStatement.executeQuery();
 
-            // iterate over the result set and add the url to the list
+			// iterate over the result set and add the url to the list
 			while (resultSet.next()) {
 				url = resultSet.getString("url");
 			}
