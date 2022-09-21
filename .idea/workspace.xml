@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="written query to Add the songs details in Database">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="reformatted the code">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,7 +18,13 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +63,11 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Aditya/IdeaProjects/Jukebox/src/main/resources/songs",
     "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -99,6 +112,7 @@
       <workItem from="1663700870609" duration="444000" />
       <workItem from="1663701332802" duration="332000" />
       <workItem from="1663701685437" duration="2783000" />
+      <workItem from="1663732001133" duration="4934000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1663673861044</created>
@@ -408,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663704330101</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="reformatted the code">
+      <created>1663732255804</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1663732255804</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created PlaylistRepository class" />
     <MESSAGE value="created DatabaseService class" />
     <MESSAGE value="created private fields in DatabaseService class" />
     <MESSAGE value="created no args constructor for Connection object" />
@@ -451,7 +471,8 @@
     <MESSAGE value="written query to Use database" />
     <MESSAGE value="written query to create a table in the database" />
     <MESSAGE value="written query to Add the songs details in Database" />
-    <option name="LAST_COMMIT_MESSAGE" value="written query to Add the songs details in Database" />
+    <MESSAGE value="reformatted the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformatted the code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

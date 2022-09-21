@@ -18,8 +18,32 @@ import java.util.List;
 public class SongRepository implements Repository<Song> {
 
     @Override
+    public boolean add(Connection connection, Song song) throws SQLException {
+
+        // write the query to insert the song into the song table
+        String query = "INSERT INTO `jukebox`.`songs` (`id`, `name`, `artist`, `duration`, `genre`, `url`) VALUES (?, ?, ?, ?, ?, ?);";
+
+        // create a prepared statement object
+        int numberOfRowsAffected;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            // set the values to the query
+            preparedStatement.setInt(1,song.getId());
+            preparedStatement.setString(2,song.getName());
+            preparedStatement.setString(3,song.getArtist());
+            preparedStatement.setString(4,song.getDuration());
+            preparedStatement.setString(5,song.getGenre());
+            preparedStatement.setString(6,song.getSongUrl());
+
+            // execute the query
+            numberOfRowsAffected = preparedStatement.executeUpdate();
+        }
+        // return true if the number of rows affected is more than 0
+        return numberOfRowsAffected > 0;
+    }
+
+    @Override
     // This method is used to get all the songs from the database.
-    public List<Song> getAllSongs(Connection connection) throws SQLException {
+    public List<Song> getAll(Connection connection) throws SQLException {
         // Create a list of songs
         List<Song> songList = new ArrayList<>();
 
@@ -36,14 +60,15 @@ public class SongRepository implements Repository<Song> {
 
             // iterate over the result set and add the songs to the list
             while (resultSet.next()) {
-                int songNumber = resultSet.getInt("song_number");
-                String songName = resultSet.getString("song_name");
+                // fetch the data from the result set
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
                 String artist = resultSet.getString("artist");
                 String genre = resultSet.getString("genre");
                 String duration = resultSet.getString("duration");
 
                 // create a song object
-                Song song = new Song(songNumber, songName, artist, genre, duration);
+                Song song = new Song(id, name, artist, genre, duration);
 
                 // add the song to the list
                 songList.add(song);
@@ -73,14 +98,15 @@ public class SongRepository implements Repository<Song> {
 
             // iterate over the result set and add the songs to the list
             while (resultSet.next()) {
-                int songNumber = resultSet.getInt("song_number");
-                String songName = resultSet.getString("song_name");
+                // fetch the data from the result set
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
                 String artists = resultSet.getString("artist");
                 String genre = resultSet.getString("genre");
                 String duration = resultSet.getString("duration");
 
                 // create a song object
-                Song song = new Song(songNumber, songName, artists, genre, duration);
+                Song song = new Song(id, name, artists, genre, duration);
 
                 // add the song to the list
                 songList.add(song);
@@ -110,14 +136,15 @@ public class SongRepository implements Repository<Song> {
 
             // iterate over the result set and add the songs to the list
             while (resultSet.next()) {
-                int songNumber = resultSet.getInt("song_number");
-                String songName = resultSet.getString("song_name");
+                // fetch the data from the result set
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
                 String artists = resultSet.getString("artist");
                 String genres = resultSet.getString("genre");
                 String duration = resultSet.getString("duration");
 
                 // create a song object
-                Song song = new Song(songNumber, songName, artists, genres, duration);
+                Song song = new Song(id, name, artists, genres, duration);
 
                 // add the song to the list
                 songList.add(song);
@@ -129,38 +156,51 @@ public class SongRepository implements Repository<Song> {
 
     @Override
     // This method is used to get all the songs from the database by song name.
-    public List<Song> getBySongName(Connection connection, String songName) throws SQLException {
-        // Create a list of songs
-        List<Song> songList = new ArrayList<>();
+    public Song getByName(Connection connection, String name) throws SQLException {
+        // Create an object of songs
+        Song song = new Song();
 
         // write the query to get all the songs from the database by song name
-        String query = "SELECT * FROM `jukebox`.`songs` WHERE (`song_name` = ?);";
+        String query = "SELECT * FROM `jukebox`.`songs` WHERE (`name` = ?);";
 
         // create a statement object using the connection object
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             // set the value in prepared statement
-            preparedStatement.setString(1, songName);
+            preparedStatement.setString(1, name);
 
             // execute the query
             ResultSet resultSet = preparedStatement.executeQuery();
 
             // iterate over the result set and add the songs to the list
             while (resultSet.next()) {
-                int songNumber = resultSet.getInt("song_number");
-                String songNames = resultSet.getString("song_name");
+                // fetch the data from the result set
+                int id = resultSet.getInt("id");
+                String name1 = resultSet.getString("name");
                 String artists = resultSet.getString("artist");
                 String genres = resultSet.getString("genre");
                 String duration = resultSet.getString("duration");
 
                 // create a song object
-                Song song = new Song(songNumber, songNames, artists, genres, duration);
+                song.setId(id);
+                song.setName(name1);
+                song.setArtist(artists);
+                song.setGenre(genres);
+                song.setDuration(duration);
 
-                // add the song to the list
-                songList.add(song);
             }
             // return the list
-            return songList;
+            return song;
         }
+    }
+
+    @Override
+    public boolean updateById(Connection connection, int id) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean deleteById(Connection connection, int id) throws SQLException {
+        return false;
     }
 }

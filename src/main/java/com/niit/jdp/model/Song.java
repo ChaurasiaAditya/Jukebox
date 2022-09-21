@@ -9,8 +9,8 @@ package com.niit.jdp.model;
 import java.util.Objects;
 
 public class Song {
-    private int songNumber;
-    private String songName;
+    private int id;
+    private String name;
     private String duration;
     private String artist;
     private String genre;
@@ -19,28 +19,28 @@ public class Song {
     public Song() {
     }
 
-    public Song(int songNumber, String songName, String artist, String genre, String duration) {
-        this.songNumber = songNumber;
-        this.songName = songName;
+    public Song(int id, String name, String artist, String genre, String duration) {
+        this.id = id;
+        this.name = name;
         this.duration = duration;
         this.artist = artist;
         this.genre = genre;
     }
 
-    public int getSongNumber() {
-        return songNumber;
+    public int getId() {
+        return id;
     }
 
-    public void setSongNumber(int songNumber) {
-        this.songNumber = songNumber;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getSongName() {
-        return songName;
+    public String getName() {
+        return name;
     }
 
-    public void setSongName(String songName) {
-        this.songName = songName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDuration() {
@@ -80,18 +80,18 @@ public class Song {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Song song = (Song) o;
-        return songNumber == song.songNumber && Objects.equals(songName, song.songName) && Objects.equals(duration, song.duration) && Objects.equals(artist, song.artist) && Objects.equals(genre, song.genre) && Objects.equals(songUrl, song.songUrl);
+        return id == song.id && Objects.equals(name, song.name) && Objects.equals(duration, song.duration) && Objects.equals(artist, song.artist) && Objects.equals(genre, song.genre) && Objects.equals(songUrl, song.songUrl);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(songNumber, songName, duration, artist, genre, songUrl);
+        return Objects.hash(id, name, duration, artist, genre, songUrl);
     }
 
     @Override
     public String toString() {
-        return  getSongNumber() +"  "+
-                getSongName() + '\'' +
+        return  getId() +"  "+
+                getName() + '\'' +
                 getArtist() + '\'' +
                 getGenre() +
                 getDuration() + '\'' +
