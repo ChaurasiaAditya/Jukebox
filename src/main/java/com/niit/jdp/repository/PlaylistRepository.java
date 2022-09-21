@@ -51,4 +51,52 @@ public class PlaylistRepository {
 		// execute the query
 		return preparedStatement.executeUpdate() > 0;
 	}
+
+	/**
+	 * It gets all the playlists from the database and returns a list of playlists
+	 *
+	 * @param connection This is the connection object that we get from the connection pool.
+	 * @return A list of playlists
+	 */
+	public List<Playlist> getAllSongsInPlaylist(Connection connection) throws SQLException {
+
+		// Create a list of playlists
+		List<Playlist> playlistList = new ArrayList<>();
+
+		// write the query to get all the playlists from the database
+		String query = "SELECT * FROM `jukebox`.`playlists`;";
+
+		// create a prepared statement object
+		PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+		// execute the query
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		// iterate over the result set and add the playlists to the list
+		while (resultSet.next()) {
+
+			// create a playlist object
+			Playlist playlist = new Playlist();
+
+			// set the values to the playlist object
+			playlist.setId(resultSet.getInt("id"));
+			playlist.setPlaylistName(resultSet.getString("name"));
+			String songIds = resultSet.getString("songs_list");
+			String[] songIdArray = songIds.split(",");
+
+			// create a list of songs
+			List<Song> songList = new ArrayList<>();
+
+			// iterate over the song id array and add the songs to the list
+			for (String songId : songIdArray) {
+				SongRepository songRepository = new SongRepository();
+				Song geyById = songRepository.geyById(connection, Integer.parseInt(songId));
+				songList.add(geyById);
+			}
+			playlist.setSongList(songList);
+			playlistList.add(playlist);
+		}
+		// return the list of playlists
+		return playlistList;
+	}
 }
