@@ -33,5 +33,11 @@ public class DisplayService {
         System.out.println("===================================");
         System.out.print("Enter your choice: ");
     }
+    public void displayPlaylists(List<String> playlistList){
+        System.out.println("===================================");
+        System.out.println("===========PLAYLISTS===============");
+        playlistList.forEach(System.out::println);
+        System.out.println("===================================");
+    }
 
 }
