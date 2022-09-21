@@ -27,11 +27,13 @@ public class DatabaseService {
     /**
      * This function connects to the database using the URL, username, and password
      */
-    public void connect() throws SQLException {
+    public boolean connect() throws SQLException {
         connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        return connection != null;
     }
 
-    /** Print the connection status of the database
+    /**
+     * Print the connection status of the database
      * If the connection is not null, then we're connected to the database
      */
     public void printConnectionStatus() {
