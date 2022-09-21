@@ -44,6 +44,22 @@
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
   </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song2_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song11_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song9_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/create_table_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song4_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song8_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song10_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song3_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song7_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song5_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song1_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song6_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/create_database_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+  </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
     <execution-history>

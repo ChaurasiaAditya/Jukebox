@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created the method to add songs in to the database">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created the method to delete row name in to the database by id">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,10 +16,26 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song10_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song11_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song1_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song2_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song3_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song4_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song5_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song6_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song7_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song8_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/add_song9_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/create_database_query.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/song/create_table_query.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/677165ec-623f-43f5-a127-e39c9ab3fdd5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/677165ec-623f-43f5-a127-e39c9ab3fdd5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,25 +64,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aditya/IdeaProjects/Jukebox/src/main/resources/songs&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Aditya/IdeaProjects/Jukebox/src/main/resources/sql/song",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aditya\IdeaProjects\Jukebox\src\main\resources\sql\song" />
       <recent name="C:\Users\Aditya\IdeaProjects\Jukebox\src\main\resources\songs" />
     </key>
   </component>
@@ -108,14 +125,9 @@
       <workItem from="1663701332802" duration="332000" />
       <workItem from="1663701685437" duration="2783000" />
       <workItem from="1663732001133" duration="4934000" />
-      <workItem from="1663736978390" duration="813000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1663673861044</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663673861044</updated>
+      <workItem from="1663736978390" duration="1288000" />
+      <workItem from="1663738277405" duration="354000" />
+      <workItem from="1663738657033" duration="1965000" />
     </task>
     <task id="LOCAL-00002" summary="changed the source and target jdk version from 18 to 11">
       <created>1663673908089</created>
@@ -439,7 +451,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663737304499</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="created the method to update song name in to the database">
+      <created>1663737879826</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1663737879826</updated>
+    </task>
+    <task id="LOCAL-00049" summary="created the method to delete row name in to the database by id">
+      <created>1663738040454</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1663738040454</updated>
+    </task>
+    <task id="LOCAL-00050" summary="created the method to delete row name in to the database by id">
+      <created>1663738088572</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1663738088573</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,8 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created private fields in DatabaseService class" />
-    <MESSAGE value="created no args constructor for Connection object" />
     <MESSAGE value="created getter method for connection" />
     <MESSAGE value="created instance for connect() method" />
     <MESSAGE value="created instance for printConnectionStatus() method" />
@@ -482,7 +513,9 @@
     <MESSAGE value="written query to Add the songs details in Database" />
     <MESSAGE value="reformatted the code" />
     <MESSAGE value="created the method to add songs in to the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="created the method to add songs in to the database" />
+    <MESSAGE value="created the method to update song name in to the database" />
+    <MESSAGE value="created the method to delete row name in to the database by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="created the method to delete row name in to the database by id" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
