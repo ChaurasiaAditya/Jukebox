@@ -15,7 +15,7 @@ public interface Repository <T> {
 
     List<T> getByGenre(Connection connection, String genre) throws SQLException;
 
-    T getByName(Connection connection, String name) throws SQLException;
+    List<T> getByName(Connection connection, String name) throws SQLException;
 
     // Update T
     boolean updateById(Connection connection, int id, String name) throws SQLException;
