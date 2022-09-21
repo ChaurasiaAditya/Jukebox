@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created add_song11_query.sql">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="created method to get Url by id in SongRepository class">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayerService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
@@ -18,13 +19,15 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24809a1184a7964e7f32ebdf585553dac4af9abb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df915df9a9d3dc9bcfe75dc66a18455a235f099a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/MusicPlayer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql/database_queries.sql" beforeDir="false" />
     </list>
@@ -78,7 +81,7 @@
       <recent name="C:\Users\Aditya\IdeaProjects\Jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main1">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
       <module name="Jukebox" />
@@ -107,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main1" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main1" />
       </list>
     </recent_temporary>
   </component>
@@ -134,14 +137,8 @@
       <workItem from="1663738277405" duration="354000" />
       <workItem from="1663738657033" duration="5115000" />
       <workItem from="1663744722303" duration="178000" />
-      <workItem from="1663744925903" duration="4414000" />
-    </task>
-    <task id="LOCAL-00015" summary="overridden equal and hashCode method in Playlist class">
-      <created>1663675172755</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1663675172755</updated>
+      <workItem from="1663744925903" duration="4780000" />
+      <workItem from="1663750235834" duration="7876000" />
     </task>
     <task id="LOCAL-00016" summary="overridden to string method in Playlist class">
       <created>1663675198981</created>
@@ -479,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663741432018</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="created method to get Url by id in SongRepository class">
+      <created>1663749877519</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1663749877519</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added method to get all the songs from database by artist" />
     <MESSAGE value="added method to get all the songs from database by genre" />
     <MESSAGE value="added method to get all the songs from database by song name" />
     <MESSAGE value="created database_queries.sql in resources" />
@@ -522,7 +525,8 @@
     <MESSAGE value="created add_song9_query.sql" />
     <MESSAGE value="created add_song10_query.sql" />
     <MESSAGE value="created add_song11_query.sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="created add_song11_query.sql" />
+    <MESSAGE value="created method to get Url by id in SongRepository class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created method to get Url by id in SongRepository class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
