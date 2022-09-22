@@ -29,6 +29,7 @@ public class Main {
 		try {
 			// Get a connection
 			databaseService.connect();
+
 			// Get the connection object
 			Connection connection = databaseService.getConnection();
 
@@ -47,14 +48,12 @@ public class Main {
 			// Create a playlist repository object
 			PlaylistRepository playlistRepository = new PlaylistRepository();
 
-			//
+			// Create a Song Setting Object
 			SongSetting songSetting = new SongSetting();
 
 			int choice;
 			do {
-
 				displayService.displayMainMenu();
-
 				choice = scanner.nextInt();
 				switch (choice) {
 					case 1: {
@@ -155,6 +154,7 @@ public class Main {
 						break;
 					}
 					case 7: {
+						// Call the setting method to perform the setting Operations
 						songSetting.setting(connection, scanner, displayService, playlistRepository, songRepository);
 						break;
 					}
