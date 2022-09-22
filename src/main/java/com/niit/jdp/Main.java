@@ -8,6 +8,7 @@ import com.niit.jdp.repository.SongRepository;
 import com.niit.jdp.service.DatabaseService;
 import com.niit.jdp.service.DisplayService;
 import com.niit.jdp.service.SongPlayerService;
+import com.niit.jdp.service.SongSetting;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -46,13 +47,16 @@ public class Main {
 			// Create a playlist repository object
 			PlaylistRepository playlistRepository = new PlaylistRepository();
 
-			int counter;
+			//
+			SongSetting songSetting = new SongSetting();
+
+			int choice;
 			do {
 
 				displayService.displayMainMenu();
 
-				counter = scanner.nextInt();
-				switch (counter) {
+				choice = scanner.nextInt();
+				switch (choice) {
 					case 1: {
 						// Get all songs from the database
 						List<Song> allSongsList = songRepository.getAll(connection);
@@ -100,7 +104,7 @@ public class Main {
 						songPlayerService.play(urlById);
 						break;
 					}
-					case 4: {
+					case 4: { // SEARCH SONG BY NAME
 						// prompt the user to enter the song name
 						System.out.print("Enter the song name : ");
 						scanner.nextLine();
@@ -117,21 +121,21 @@ public class Main {
 						songPlayerService.play(urlById);
 						break;
 					}
-					case 5: {
+					case 5: { // ADD SONG TO PLAYLIST
 						// prompt the user to enter the playlist name
 						System.out.print("Enter the playlist name : ");
 						String playlistName = scanner.next();
-						// prompt the user to enter the playlist Ids
-						System.out.print("Enter the playlist Ids : ");
+						// prompt the user to enter the Song Ids
+						System.out.print("Enter the Song Ids : ");
 						String playlistIds = scanner.next();
 						if (playlistRepository.createNewPlaylist(connection, playlistName, playlistIds)) {
-							System.out.println("Playlist added successfully");
+							System.out.println("\u001B[32mPlaylist added successfully\u001B[0m");
 						} else {
-							System.out.println("Playlist not added");
+							System.err.println("Playlist not added");
 						}
 						break;
 					}
-					case 6: {
+					case 6: { // VIEW ALL PLAYLIST
 						// Get all playlist from the database
 						List<String> allPlaylistNames = playlistRepository.getAllPlaylistNames(connection);
 						displayService.displayPlaylists(allPlaylistNames);
@@ -151,24 +155,16 @@ public class Main {
 						break;
 					}
 					case 7: {
-						// Get all playlist from the database
-						List<String> allPlaylistNames = playlistRepository.getAllPlaylistNames(connection);
-						displayService.displayPlaylists(allPlaylistNames);
-
-						System.out.print("Enter the playlist Id to delete the Playlist : ");
-						int playlistId = scanner.nextInt();
-						if (playlistRepository.deletePlaylist(connection, playlistId)) {
-							System.out.println("Playlist Deleted Successfully");
-						} else System.out.println("Delete process Fails");
+						songSetting.setting(connection, scanner, displayService, playlistRepository, songRepository);
 						break;
 					}
 					default:
-						System.out.println("Thank You For Using Jukebox");
+						System.out.println("\u001B[32mThank You For Using Jukebox\u001B[0m");
 				}
-			} while (counter != 8);
+			} while (choice != 8);
 
-		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException | PlaylistIdNotFoundException |
-				 SongIdNotFoundException exception) {
+		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException |
+				 PlaylistIdNotFoundException | SongIdNotFoundException exception) {
 			System.out.println(exception.getMessage());
 		}
 		scanner.close();
