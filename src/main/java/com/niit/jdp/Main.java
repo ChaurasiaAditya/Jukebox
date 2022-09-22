@@ -1,5 +1,6 @@
 package com.niit.jdp;
 
+import com.niit.jdp.exeception.PlaylistIdNotFoundException;
 import com.niit.jdp.exeception.SongIdNotFoundException;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.PlaylistRepository;
@@ -123,7 +124,7 @@ public class Main {
 						// prompt the user to enter the playlist Ids
 						System.out.print("Enter the playlist Ids : ");
 						String playlistIds = scanner.next();
-						if (playlistRepository.addSongsInPlaylist(connection, playlistName, playlistIds)) {
+						if (playlistRepository.createNewPlaylist(connection, playlistName, playlistIds)) {
 							System.out.println("Playlist added successfully");
 						} else {
 							System.out.println("Playlist not added");
@@ -149,14 +150,26 @@ public class Main {
 						songPlayerService.play(urlById);
 						break;
 					}
+					case 7: {
+						// Get all playlist from the database
+						List<String> allPlaylistNames = playlistRepository.getAllPlaylistNames(connection);
+						displayService.displayPlaylists(allPlaylistNames);
+
+						System.out.print("Enter the playlist Id to delete the Playlist : ");
+						int playlistId = scanner.nextInt();
+						if (playlistRepository.deletePlaylist(connection, playlistId)) {
+							System.out.println("Playlist Deleted Successfully");
+						} else System.out.println("Delete process Fails");
+						break;
+					}
 					default:
 						System.out.println("Thank You For Using Jukebox");
 				}
-			} while (counter != 7);
+			} while (counter != 8);
 
-		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException | SongIdNotFoundException exception) {
+		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException | PlaylistIdNotFoundException |
+				 SongIdNotFoundException exception) {
 			System.out.println(exception.getMessage());
-			exception.printStackTrace();
 		}
 		scanner.close();
 	}

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added SongNameNotFoundException Class">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="updated SongNameNotFoundException Class">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,7 +16,10 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/SongNameNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/SongNameNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/SongNameNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/PlaylistIdNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,7 @@
       <recent name="com.niit.jdp.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.com.niit.jdp in Jukebox">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
       <module name="Jukebox" />
@@ -162,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.com.niit.jdp in Jukebox" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SongRepositoryTest.givenNameCheckSongObjectSuccess" />
         <item itemvalue="JUnit.SongRepositoryTest.getByArtist1" />
         <item itemvalue="JUnit.SongRepositoryTest.givenIdCheckSongObjectSuccess" />
@@ -205,14 +208,7 @@
       <workItem from="1663792025097" duration="488000" />
       <workItem from="1663817543357" duration="10974000" />
       <workItem from="1663829909293" duration="251000" />
-      <workItem from="1663830184782" duration="11667000" />
-    </task>
-    <task id="LOCAL-00054" summary="created add_song2_query.sql">
-      <created>1663741301746</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1663741301746</updated>
+      <workItem from="1663830184782" duration="12772000" />
     </task>
     <task id="LOCAL-00055" summary="created add_song3_query.sql">
       <created>1663741311982</created>
@@ -550,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663841718922</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="updated SongNameNotFoundException Class">
+      <created>1663841901209</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1663841901209</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +571,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added query in  create_table_query.sql" />
     <MESSAGE value="added the java doc in SongRepository class" />
     <MESSAGE value="added method to get all songs in Playlist" />
     <MESSAGE value="added method to get all songs in Playlist database" />
@@ -593,7 +595,8 @@
     <MESSAGE value="created SongNotFoundException class" />
     <MESSAGE value="added SongNotFoundException constructor" />
     <MESSAGE value="added SongNameNotFoundException Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added SongNameNotFoundException Class" />
+    <MESSAGE value="updated SongNameNotFoundException Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated SongNameNotFoundException Class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
