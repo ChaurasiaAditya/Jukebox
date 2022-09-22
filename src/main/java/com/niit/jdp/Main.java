@@ -67,6 +67,7 @@ public class Main {
 					case 2: {
 						// prompt the user to enter the artist name
 						System.out.print("Enter the artist name : ");
+						scanner.nextLine();
 						String artist = scanner.nextLine();
 						// Get all songs by artist from the database
 						List<Song> songListByArtist = songRepository.getByArtist(connection, artist);
@@ -83,6 +84,7 @@ public class Main {
 					case 3: {
 						// prompt the user to enter the genre
 						System.out.print("Enter the genre : ");
+						scanner.nextLine();
 						String genre = scanner.next();
 						// Get all songs by genre from the database
 						List<Song> songsListByGenre = songRepository.getByGenre(connection, genre);
@@ -99,6 +101,7 @@ public class Main {
 					case 4: {
 						// prompt the user to enter the song name
 						System.out.print("Enter the song name : ");
+						scanner.nextLine();
 						String name = scanner.nextLine();
 						// Get all songs by name from the database
 						List<Song> songListByName = songRepository.getByName(connection, name);
@@ -146,10 +149,9 @@ public class Main {
 						break;
 					}
 					default:
-						System.out.println("See you soon");
+						System.out.println("Thank You For Using Jukebox");
 				}
 			} while (counter != 7);
-
 
 		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException exception) {
 			System.out.println(exception.getMessage());
