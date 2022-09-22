@@ -6,7 +6,6 @@
  */
 package com.niit.jdp.repository;
 
-import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
 
 import java.sql.Connection;
@@ -14,6 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.StringJoiner;
 
@@ -27,7 +27,6 @@ public class PlaylistRepository {
 	 * @return A boolean value.
 	 */
 	public boolean addSongsInPlaylist(Connection connection, String playlistName, String songNumbers) throws SQLException {
-
 		// convert string to array
 		char[] songNumbersArray = songNumbers.toCharArray();
 
@@ -38,7 +37,6 @@ public class PlaylistRepository {
 		for (char songNumber : songNumbersArray) {
 			stringJoiner.add(String.valueOf(songNumber));
 		}
-
 		// Create a string with the query
 		String query = "INSERT INTO `jukebox`.`playlists` (`name`, `songs_list`) VALUES (?, ?);";
 
@@ -53,60 +51,42 @@ public class PlaylistRepository {
 		}
 	}
 
+
 	/**
-	 * It gets all the playlists from the database and returns a list of playlists
+	 * It takes a playlist id and returns a list of songs in that playlist
 	 *
-	 * @param connection This is the connection object that we get from the connection pool.
-	 * @return A list of playlists
+	 * @param connection The connection to the database.
+	 * @param playlistId The id of the playlist you want to get the songs from.
+	 * @return A list of songs
 	 */
-	public List<Playlist> getAllSongsInPlaylist(Connection connection) throws SQLException {
+	public List<Song> getAllSongsInPlaylist(Connection connection, int playlistId) throws SQLException {
+		// Create an object of SongRepository class
+		SongRepository songRepository = new SongRepository();
+		// Create a list of songs
+		List<Song> songList = new ArrayList<>();
 
-		// Create a list of playlists
-		List<Playlist> playlistList = new ArrayList<>();
+		// store the ids in a string
+		String idsFromPlaylist = getIdsFromPlaylist(connection, playlistId);
+		// convert the string to array seperated by (,)
+		String[] idInString = idsFromPlaylist.split(",");
 
-		// write the query to get all the playlists from the database
-		String query = "SELECT * FROM `jukebox`.`playlists`;";
+		// iterate over array to convert string array to integer array
+		int[] idInInteger = Arrays.stream(idInString).mapToInt(Integer::parseInt).toArray();
 
-		// create a prepared statement object
-		ResultSet resultSet;
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-			// execute the query
-			resultSet = preparedStatement.executeQuery();
+		// iterate over integer array and store the variable in list
+		for (int ids : idInInteger) {
+			Song song = songRepository.geyById(connection, ids);
+			songList.add(song);
 		}
-
-		// iterate over the result set and add the playlists to the list
-		while (resultSet.next()) {
-
-			// create a playlist object
-			Playlist playlist = new Playlist();
-
-			// set the values to the playlist object
-			playlist.setId(resultSet.getInt("id"));
-			playlist.setPlaylistName(resultSet.getString("name"));
-			String songIds = resultSet.getString("songs_list");
-			String[] songIdArray = songIds.split(",");
-
-			// create a list of songs
-			List<Song> songList = new ArrayList<>();
-
-			// iterate over the song id array and add the songs to the list
-			for (String songId : songIdArray) {
-				SongRepository songRepository = new SongRepository();
-				Song geyById = songRepository.geyById(connection, Integer.parseInt(songId));
-				songList.add(geyById);
-			}
-			playlist.setSongList(songList);
-			playlistList.add(playlist);
-		}
-		// return the list of playlists
-		return playlistList;
+		// return the list of songs
+		return songList;
 	}
 
+
 	/**
-	 * > This function gets all the playlists from the database and returns a list of playlist names
+	 * > This function gets all the playlists from the database and returns them as a list of strings
 	 *
-	 * @param connection The connection object that is used to connect to the database.
+	 * @param connection The connection to the database
 	 * @return A list of playlists
 	 */
 	public List<String> getAllPlaylistNames(Connection connection) throws SQLException {
@@ -119,14 +99,13 @@ public class PlaylistRepository {
 		// create a prepared statement object
 		ResultSet resultSet;
 		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
 			// execute the query
 			resultSet = preparedStatement.executeQuery();
-		}
 
-		// iterate over the result set and add the playlists to the list
-		while (resultSet.next()) {
-			playlistNameList.add(resultSet.getInt("id") + "\t" + resultSet.getString("name"));
+			// iterate over the result set and add the playlists to the list
+			while (resultSet.next()) {
+				playlistNameList.add(resultSet.getInt("id") + "\t" + resultSet.getString("name"));
+			}
 		}
 		// return the list of playlists
 		return playlistNameList;
@@ -152,5 +131,34 @@ public class PlaylistRepository {
 			// execute the query
 			return preparedStatement.executeUpdate() > 0;
 		}
+	}
+
+	/**
+	 * This function takes a playlist id as an argument and returns a string of song ids
+	 *
+	 * @param connection The connection object that is used to connect to the database.
+	 * @param playListId The id of the playlist whose songs you want to get.
+	 * @return A string of song ids
+	 */
+	public String getIdsFromPlaylist(Connection connection, int playListId) throws SQLException {
+		String songsIds = null;
+		// write the query to delete the playlist
+		String query = "SELECT `songs_list` FROM `jukebox`.`playlists` WHERE (`id` = ?);";
+
+		// create a object for prepared Statement
+		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+			// set the values for prepared statement
+			preparedStatement.setInt(1, playListId);
+
+			// execute the query
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			// iterate over the result set and add playlist id to string
+			while (resultSet.next()) {
+				songsIds = resultSet.getString("songs_list");
+			}
+		}
+		// return the list of ids as string
+		return songsIds;
 	}
 }

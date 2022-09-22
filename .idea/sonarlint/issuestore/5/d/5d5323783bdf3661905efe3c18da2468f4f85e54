@@ -1,11 +1,0 @@
-
-†
-java:S1488'"kImmediately return this expression instead of assigning it to the temporary variable "microsecondPosition".(Ïß°ºüÿÿÿÿ
-’
-java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Ä†¨ûÿÿÿÿ
-P	java:S125"<This block of commented-out lines of code should be removed.(¯öÎk
-V	java:S125"<This block of commented-out lines of code should be removed.(ù¬şòÿÿÿÿÿ
-Q	java:S125""<This block of commented-out lines of code should be removed.(êä•ß
-P	java:S125*"<This block of commented-out lines of code should be removed.(¯——
-O
-java:S1128	"4Remove this unused import 'com.niit.jdp.model.Song'.(î¡Ø´ûÿÿÿÿ

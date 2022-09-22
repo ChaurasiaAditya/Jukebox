@@ -135,21 +135,28 @@ public class Main {
 						displayService.displayPlaylists(allPlaylistNames);
 
 						System.out.println("Enter the playlist id to view the songs in the Playlist : ");
-						// int playlistId = scanner.nextInt();
+						int playlistId = scanner.nextInt();
 						// Get all songs in playlist by playlist id from the database
-						List<Playlist> songsInPlaylist = playlistRepository.getAllSongsInPlaylist(connection);
+						List<Song> songsInPlaylist = playlistRepository.getAllSongsInPlaylist(connection,playlistId);
 						// Display all the songs
-						System.out.println(songsInPlaylist);
+						displayService.displayCatalogue(songsInPlaylist);
+						System.out.print("\nEnter the Song Id number to play the song : ");
+						// Get the song url by id from the database
+						int id = scanner.nextInt();
+						String urlById = songRepository.getUrlById(connection, id);
+						// Play the song
+						songPlayerService.play(urlById);
 						break;
 					}
 					default:
 						System.out.println("See you soon");
 				}
-			} while (counter != 5);
+			} while (counter != 7);
 
 
 		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException exception) {
 			System.out.println(exception.getMessage());
+			exception.printStackTrace();
 		}
 	}
 }
