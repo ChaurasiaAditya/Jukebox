@@ -58,6 +58,7 @@
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song7_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song5_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song1_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/Dump20220923.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/add_song6_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/song/create_database_query.sql" connection-id="2c69be8e-cc0c-4135-bd7a-eff356eb75fd" session-id="MAIN" current-schema="jukebox" />
   </component>
