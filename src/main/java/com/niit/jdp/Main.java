@@ -1,5 +1,6 @@
 package com.niit.jdp;
 
+import com.niit.jdp.exeception.SongIdNotFoundException;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
@@ -153,7 +154,7 @@ public class Main {
 				}
 			} while (counter != 7);
 
-		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException exception) {
+		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException | SongIdNotFoundException exception) {
 			System.out.println(exception.getMessage());
 			exception.printStackTrace();
 		}

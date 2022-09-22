@@ -1,5 +1,6 @@
 package com.niit.jdp.repository;
 
+import com.niit.jdp.exeception.SongIdNotFoundException;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.service.DatabaseService;
 import org.junit.jupiter.api.AfterEach;
@@ -71,14 +72,14 @@ class SongRepositoryTest {
 	}
 
 	@Test
-	void givenIdCheckUrlOfSongSuccess() throws SQLException {
+	void givenIdCheckUrlOfSongSuccess() throws SQLException, SongIdNotFoundException {
 		String url = song1.getSongUrl();
 		String urlById = songRepository.getUrlById(connection, 1);
 		Assertions.assertEquals(url, urlById);
 	}
 
 	@Test
-	void givenIdCheckUrlOfSongFailure() throws SQLException {
+	void givenIdCheckUrlOfSongFailure() throws SQLException, SongIdNotFoundException {
 		String url = song1.getSongUrl();
 		String urlById = songRepository.getUrlById(connection, 2);
 		Assertions.assertNotEquals(url, urlById);

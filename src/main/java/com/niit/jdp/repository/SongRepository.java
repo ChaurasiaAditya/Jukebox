@@ -6,6 +6,7 @@
  */
 package com.niit.jdp.repository;
 
+import com.niit.jdp.exeception.SongIdNotFoundException;
 import com.niit.jdp.model.Song;
 
 import java.sql.Connection;
@@ -264,24 +265,28 @@ public class SongRepository implements Repository<Song> {
 	 * @throws SQLException sql exception
 	 */
 	@Override
-	public boolean updateById(Connection connection, int id, String name) throws SQLException {
+	public boolean updateById(Connection connection, int id, String name) throws SQLException, SongIdNotFoundException {
+		if (id < 0) {
+			throw new SongIdNotFoundException("Id Cannot be Negative");
+		} else {
 
-		// write the query to update the song by id
-		String query = "UPDATE `jukebox`.`songs` SET `name` = ? WHERE (`id` = ?);";
+			// write the query to update the song by id
+			String query = "UPDATE `jukebox`.`songs` SET `name` = ? WHERE (`id` = ?);";
 
-		int numberOfRowsAffected;
-		// create a statement object using the connection object
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+			int numberOfRowsAffected;
+			// create a statement object using the connection object
+			try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-			// set the value in prepared statement
-			preparedStatement.setString(1, name);
-			preparedStatement.setInt(2, id);
+				// set the value in prepared statement
+				preparedStatement.setString(1, name);
+				preparedStatement.setInt(2, id);
 
-			// execute the query
-			numberOfRowsAffected = preparedStatement.executeUpdate();
+				// execute the query
+				numberOfRowsAffected = preparedStatement.executeUpdate();
+			}
+			// return true if the number of rows affected is greater than 0
+			return numberOfRowsAffected > 0;
 		}
-		// return true if the number of rows affected is greater than 0
-		return numberOfRowsAffected > 0;
 	}
 
 	/**
@@ -293,22 +298,26 @@ public class SongRepository implements Repository<Song> {
 	 * @throws SQLException sql exception
 	 */
 	@Override
-	public boolean deleteById(Connection connection, int id) throws SQLException {
-		// write the query to delete the song by id
-		String query = "DELETE FROM `jukebox`.`songs` WHERE (`id` = ?);";
+	public boolean deleteById(Connection connection, int id) throws SQLException, SongIdNotFoundException {
+		if (id < 0) {
+			throw new SongIdNotFoundException("Id Cannot be Negative");
+		} else {
+			// write the query to delete the song by id
+			String query = "DELETE FROM `jukebox`.`songs` WHERE (`id` = ?);";
 
-		int numberOfRowsAffected;
-		// create a statement object using the connection object
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+			int numberOfRowsAffected;
+			// create a statement object using the connection object
+			try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-			// set the value in prepared statement
-			preparedStatement.setInt(1, id);
+				// set the value in prepared statement
+				preparedStatement.setInt(1, id);
 
-			// execute the query
-			numberOfRowsAffected = preparedStatement.executeUpdate();
+				// execute the query
+				numberOfRowsAffected = preparedStatement.executeUpdate();
+			}
+			// return true if the number of rows affected is greater than 0
+			return numberOfRowsAffected > 0;
 		}
-		// return true if the number of rows affected is greater than 0
-		return numberOfRowsAffected > 0;
 	}
 
 	/**
@@ -318,26 +327,31 @@ public class SongRepository implements Repository<Song> {
 	 * @param id         The id of the song
 	 * @return The url of the song with the given id.
 	 */
-	public String getUrlById(Connection connection, int id) throws SQLException {
-		String url = null;
+	public String getUrlById(Connection connection, int id) throws SQLException, SongIdNotFoundException {
 
-		// write the query to get the url by id
-		String query = "SELECT `url` FROM `jukebox`.`songs` WHERE (`id` = ?);";
+		if (id < 0) {
+			throw new SongIdNotFoundException("Id Cannot be Negative");
+		} else {
+			String url = null;
 
-		// create a Prepared statement object using the connection object
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+			// write the query to get the url by id
+			String query = "SELECT `url` FROM `jukebox`.`songs` WHERE (`id` = ?);";
 
-			// set the value in prepared statement
-			preparedStatement.setInt(1, id);
+			// create a Prepared statement object using the connection object
+			try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-			// execute the query
-			ResultSet resultSet = preparedStatement.executeQuery();
+				// set the value in prepared statement
+				preparedStatement.setInt(1, id);
 
-			// iterate over the result set and add the url to the list
-			while (resultSet.next()) {
-				url = resultSet.getString("url");
+				// execute the query
+				ResultSet resultSet = preparedStatement.executeQuery();
+
+				// iterate over the result set and add the url to the list
+				while (resultSet.next()) {
+					url = resultSet.getString("url");
+				}
 			}
+			return url;
 		}
-		return url;
 	}
 }
