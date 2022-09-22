@@ -39,6 +39,8 @@ class SongRepositoryTest {
 
 	@AfterEach
 	void tearDown() {
+		databaseService = null;
+		songRepository = null;
 	}
 
 	@Test
