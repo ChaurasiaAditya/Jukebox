@@ -49,6 +49,7 @@ public class SongPlayerService {
 						break;
 					case 3:
 						clip.setMicrosecondPosition(0);
+						clip.start();
 						break;
 					case 4:
 						clip.stop();
@@ -57,7 +58,7 @@ public class SongPlayerService {
 					default:
 						System.out.println("Invalid choice");
 				}
-			}while (choice != 4);
+			} while (choice != 4);
 		}
 	}
 }

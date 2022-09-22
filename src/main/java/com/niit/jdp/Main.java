@@ -1,6 +1,5 @@
 package com.niit.jdp;
 
-import com.niit.jdp.model.Playlist;
 import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
@@ -129,15 +128,15 @@ public class Main {
 						}
 						break;
 					}
-					case 6:{
+					case 6: {
 						// Get all playlist from the database
 						List<String> allPlaylistNames = playlistRepository.getAllPlaylistNames(connection);
 						displayService.displayPlaylists(allPlaylistNames);
 
-						System.out.println("Enter the playlist id to view the songs in the Playlist : ");
+						System.out.print("Enter the playlist Id to view the songs in the Playlist : ");
 						int playlistId = scanner.nextInt();
 						// Get all songs in playlist by playlist id from the database
-						List<Song> songsInPlaylist = playlistRepository.getAllSongsInPlaylist(connection,playlistId);
+						List<Song> songsInPlaylist = playlistRepository.getAllSongsInPlaylist(connection, playlistId);
 						// Display all the songs
 						displayService.displayCatalogue(songsInPlaylist);
 						System.out.print("\nEnter the Song Id number to play the song : ");
