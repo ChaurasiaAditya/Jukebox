@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added test case to check database connection in DatabaseServiceTest">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="added test case to check songs from database in SongsRepositoryTest">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,6 +16,8 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf6f65185120d5158c3b2f1089d03db6c03b1b2b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0e0f9cec86fe4b939ae22be5264c758801eb28f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/niit/jdp/repository/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niit/jdp/repository/SongRepositoryTest.java" afterDir="false" />
@@ -86,7 +88,7 @@
       <recent name="com.niit.jdp.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SongRepositoryTest.getByArtist1">
+  <component name="RunManager" selected="JUnit.com.niit.jdp in Jukebox">
     <configuration name="DatabaseServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jukebox" />
       <extension name="coverage">
@@ -98,22 +100,6 @@
       <option name="PACKAGE_NAME" value="com.niit.jdp.service" />
       <option name="MAIN_CLASS_NAME" value="com.niit.jdp.service.DatabaseServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistRepositoryTest.getIdsFromPlaylist11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Jukebox" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niit.jdp.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.niit.jdp.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.niit.jdp.repository.PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="getIdsFromPlaylist11" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.givenIdCheckUrlOfSongFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SongRepositoryTest.givenNameCheckSongObjectSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Jukebox" />
       <extension name="coverage">
         <pattern>
@@ -160,19 +146,33 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.niit.jdp.repository" />
       <option name="MAIN_CLASS_NAME" value="com.niit.jdp.repository.SongRepositoryTest" />
-      <option name="METHOD_NAME" value="givenIdCheckUrlOfSongFailure" />
+      <option name="METHOD_NAME" value="givenNameCheckSongObjectSuccess" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.niit.jdp in Jukebox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Jukebox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niit.jdp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.niit.jdp" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.niit.jdp in Jukebox" />
+        <item itemvalue="JUnit.SongRepositoryTest.givenNameCheckSongObjectSuccess" />
         <item itemvalue="JUnit.SongRepositoryTest.getByArtist1" />
         <item itemvalue="JUnit.SongRepositoryTest.givenIdCheckSongObjectSuccess" />
         <item itemvalue="JUnit.DatabaseServiceTest" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.getIdsFromPlaylist11" />
-        <item itemvalue="JUnit.SongRepositoryTest.givenIdCheckUrlOfSongFailure" />
       </list>
     </recent_temporary>
   </component>
@@ -211,14 +211,7 @@
       <workItem from="1663792025097" duration="488000" />
       <workItem from="1663817543357" duration="10974000" />
       <workItem from="1663829909293" duration="251000" />
-      <workItem from="1663830184782" duration="8192000" />
-    </task>
-    <task id="LOCAL-00049" summary="created the method to delete row name in to the database by id">
-      <created>1663738040454</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1663738040454</updated>
+      <workItem from="1663830184782" duration="8892000" />
     </task>
     <task id="LOCAL-00050" summary="created the method to delete row name in to the database by id">
       <created>1663738088572</created>
@@ -556,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663837974146</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="added test case to check songs from database in SongsRepositoryTest">
+      <created>1663838765581</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1663838765581</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +574,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created play method in MusicPlayerService class" />
     <MESSAGE value="created method to get url of song by id in MusicPlayerService class" />
     <MESSAGE value="added use_database_query.sql" />
     <MESSAGE value="added query in create_table_query.sql" />
@@ -599,7 +598,8 @@
     <MESSAGE value="added test case to check url by id" />
     <MESSAGE value="added test case to check ids from playlist in PlaylistRepositoryTest" />
     <MESSAGE value="added test case to check database connection in DatabaseServiceTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test case to check database connection in DatabaseServiceTest" />
+    <MESSAGE value="added test case to check songs from database in SongsRepositoryTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test case to check songs from database in SongsRepositoryTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

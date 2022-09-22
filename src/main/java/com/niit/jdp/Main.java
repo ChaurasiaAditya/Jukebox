@@ -17,13 +17,11 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-
 		// Create a scanner object
 		Scanner scanner = new Scanner(System.in);
 
 		// Create an object of DatabaseService
 		DatabaseService databaseService = new DatabaseService();
-
 
 		try {
 			// Get a connection
@@ -157,5 +155,6 @@ public class Main {
 			System.out.println(exception.getMessage());
 			exception.printStackTrace();
 		}
+		scanner.close();
 	}
 }

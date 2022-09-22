@@ -60,7 +60,7 @@ class SongRepositoryTest {
 	void givenNameCheckSongObjectSuccess() throws SQLException {
 		List<Song> songList = new ArrayList<>();
 		songList.add(song);
-		Assertions.assertEquals(songList, songRepository.getByName(connection, song1.getName()));
+		Assertions.assertEquals(songList, songRepository.getByName(connection, song.getName()));
 	}
 
 	@Test
