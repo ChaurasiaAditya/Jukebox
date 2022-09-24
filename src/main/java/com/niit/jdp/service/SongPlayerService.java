@@ -20,12 +20,10 @@ public class SongPlayerService {
 	 * @param songPath The path of the song file.
 	 */
 	public void play(String songPath) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-
 		// create AudioInputStream object
 		File songFile = new File(songPath);
 
 		try (AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(songFile)) {
-
 			// create clip reference
 			Clip clip = AudioSystem.getClip();
 
