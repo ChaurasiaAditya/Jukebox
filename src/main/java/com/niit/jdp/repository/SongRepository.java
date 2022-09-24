@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SongRepository implements Repository<Song> {
 
@@ -102,38 +103,8 @@ public class SongRepository implements Repository<Song> {
 	@Override
 	public List<Song> getByArtist(Connection connection, String artist) throws SQLException {
 		// Create a list of songs
-		List<Song> songList = new ArrayList<>();
-
-		// write the query to get all the songs from the database by artist
-		String query = "SELECT * FROM `jukebox`.`songs` WHERE (`artist` = ?);";
-
-		// create a statement object using the connection object
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-			// set the value in prepared statement
-			preparedStatement.setString(1, artist);
-
-			// execute the query
-			ResultSet resultSet = preparedStatement.executeQuery();
-
-			// iterate over the result set and add the songs to the list
-			while (resultSet.next()) {
-				// fetch the data from the result set
-				int id = resultSet.getInt("id");
-				String name = resultSet.getString("name");
-				String artists = resultSet.getString("artist");
-				String genre = resultSet.getString("genre");
-				String duration = resultSet.getString("duration");
-
-				// create a song object
-				Song song = new Song(id, name, artists, genre, duration);
-
-				// add the song to the list
-				songList.add(song);
-			}
-			// return the list
-			return songList;
-		}
+		List<Song> songList = getAll(connection);
+		return songList.stream().filter(song -> song.getArtist().equalsIgnoreCase(artist)).collect(Collectors.toList());
 	}
 
 	/**
@@ -146,39 +117,8 @@ public class SongRepository implements Repository<Song> {
 	 */
 	@Override
 	public List<Song> getByGenre(Connection connection, String genre) throws SQLException {
-		// Create a list of songs
-		List<Song> songList = new ArrayList<>();
-
-		// write the query to get all the songs from the database by genre
-		String query = "SELECT * FROM `jukebox`.`songs` WHERE (`genre` = ?);";
-
-		// create a statement object using the connection object
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-			// set the value in prepared statement
-			preparedStatement.setString(1, genre);
-
-			// execute the query
-			ResultSet resultSet = preparedStatement.executeQuery();
-
-			// iterate over the result set and add the songs to the list
-			while (resultSet.next()) {
-				// fetch the data from the result set
-				int id = resultSet.getInt("id");
-				String name = resultSet.getString("name");
-				String artists = resultSet.getString("artist");
-				String genres = resultSet.getString("genre");
-				String duration = resultSet.getString("duration");
-
-				// create a song object
-				Song song = new Song(id, name, artists, genres, duration);
-
-				// add the song to the list
-				songList.add(song);
-			}
-			// return the list
-			return songList;
-		}
+		List<Song> all = getAll(connection);
+		return all.stream().filter(songs -> songs.getGenre().equalsIgnoreCase(genre)).collect(Collectors.toList());
 	}
 
 	/**
@@ -192,20 +132,9 @@ public class SongRepository implements Repository<Song> {
 	public Song geyById(Connection connection, int id) throws SQLException {
 
 		// call the getAll method to get all the songs from the database
-		List<Song> songs = getAll(connection);
+		List<Song> songList = getAll(connection);
 
-		//create a song object
-		Song songById = new Song();
-
-		// iterate over the list and get the song by id
-		for (Song song : songs) {
-			if (song.getId() == id) {
-				// set the song object
-				songById = song;
-			}
-		}
-		// return the song object
-		return songById;
+		return songList.stream().filter(song -> song.getId() == id).findFirst().orElse(new Song());
 	}
 
 	/**
@@ -220,39 +149,8 @@ public class SongRepository implements Repository<Song> {
 	public List<Song> getByName(Connection connection, String name) throws SQLException {
 
 		// Create a list of songs
-		List<Song> songList = new ArrayList<>();
-
-		// write the query to get all the songs from the database by song name
-		String query = "SELECT * FROM `jukebox`.`songs` WHERE (`name` = ?);";
-
-		// create a statement object using the connection object
-		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-			// set the value in prepared statement
-			preparedStatement.setString(1, name);
-
-			// execute the query
-			ResultSet resultSet = preparedStatement.executeQuery();
-
-			// iterate over the result set and add the songs to the list
-			while (resultSet.next()) {
-				// fetch the data from the result set
-				int id = resultSet.getInt("id");
-				String name1 = resultSet.getString("name");
-				String artists = resultSet.getString("artist");
-				String genres = resultSet.getString("genre");
-				String duration = resultSet.getString("duration");
-
-				// Create an object of songs
-				Song song = new Song(id, name1, artists, genres, duration);
-
-				// add the song to the list
-				songList.add(song);
-
-			}
-			// return the list
-			return songList;
-		}
+		List<Song> songList = getAll(connection);
+		return songList.stream().filter(song -> song.getName().equals(name)).collect(Collectors.toList());
 	}
 
 	/**
@@ -276,7 +174,6 @@ public class SongRepository implements Repository<Song> {
 			int numberOfRowsAffected;
 			// create a statement object using the connection object
 			try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
 				// set the value in prepared statement
 				preparedStatement.setString(1, name);
 				preparedStatement.setInt(2, id);
@@ -308,7 +205,6 @@ public class SongRepository implements Repository<Song> {
 			int numberOfRowsAffected;
 			// create a statement object using the connection object
 			try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
 				// set the value in prepared statement
 				preparedStatement.setInt(1, id);
 
@@ -332,26 +228,9 @@ public class SongRepository implements Repository<Song> {
 		if (id < 0) {
 			throw new SongIdNotFoundException("Id Cannot be Negative");
 		} else {
-			String url = null;
-
-			// write the query to get the url by id
-			String query = "SELECT `url` FROM `jukebox`.`songs` WHERE (`id` = ?);";
-
-			// create a Prepared statement object using the connection object
-			try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-				// set the value in prepared statement
-				preparedStatement.setInt(1, id);
-
-				// execute the query
-				ResultSet resultSet = preparedStatement.executeQuery();
-
-				// iterate over the result set and add the url to the list
-				while (resultSet.next()) {
-					url = resultSet.getString("url");
-				}
-			}
-			return url;
+			List<Song> songList = getAll(connection);
+			Song song1 = songList.stream().filter(song -> song.getId() == id).findFirst().orElse(new Song());
+			return song1.getSongUrl();
 		}
 	}
 }
