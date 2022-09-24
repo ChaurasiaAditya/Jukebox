@@ -28,23 +28,25 @@ public class SongSetting {
 				// Get all playlist from the database
 				List<String> allPlaylistNames = playlistRepository.getAllPlaylistNames(connection);
 				displayService.displayPlaylists(allPlaylistNames);
-				System.out.print("Enter the playlist Id to delete the Playlist : ");
+				System.out.println("Enter the playlist Id to delete the Playlist or 0 to Cancel delete process");
+				System.out.print("Enter your Choice : ");
 				int playlistId = scanner.nextInt();
-				if (playlistRepository.deletePlaylist(connection, playlistId)) {
+				if (playlistId > 0 && playlistRepository.deletePlaylist(connection, playlistId)) {
 					System.out.println("\u001B[32mPlaylist " + playlistId + " Deleted Successfully\u001B[0m");
-				} else System.err.println("Delete process Fails");
+				} else {
+					System.out.println("Playlist deletion Cancelled ");
+				}
 				break;
 			}
 			case 2: { // Delete a Song
 				List<Song> allSongsList = songRepository.getAll(connection);
 				// Display all the songs
 				displayService.displayCatalogue(allSongsList);
-				System.out.print("Enter the Song Id to delete the Song : ");
+				System.out.println("Enter the Song Id to delete the Song or 0 to Cancel delete process");
+				System.out.print("Enter your Choice : ");
 				int id = scanner.nextInt();
-				if (songRepository.deleteById(connection, id)) {
+				if (id > 0 && songRepository.deleteById(connection, id)) {
 					System.out.println("\u001B[32mSong " + id + " Deleted Successfully\u001B[0m");
-				} else {
-					System.err.println("Song Deleted Failed");
 				}
 				break;
 			}
@@ -52,15 +54,19 @@ public class SongSetting {
 				List<Song> allSongsList = songRepository.getAll(connection);
 				// Display all the songs
 				displayService.displayCatalogue(allSongsList);
-				System.out.print("Enter the Song Id to Update the Name : ");
+				System.out.print("Enter the Song Id to Update the Name or 0 to Cancel Update process : ");
 				int id = scanner.nextInt();
-				scanner.nextLine();
-				System.out.print("Enter the New Name of song : ");
-				String name = scanner.nextLine();
-				if (songRepository.updateById(connection, id, name)) {
-					System.out.println("\u001B[32mSong Name Updated Successfully\u001B[0m");
+				if (id > 0) {
+					scanner.nextLine();
+					System.out.print("Enter the New Name of song : ");
+					String name = scanner.nextLine();
+					if (songRepository.updateById(connection, id, name)) {
+						System.out.println("\u001B[32mSong Name Updated Successfully\u001B[0m");
+					} else {
+						System.out.println("Song Name Update Failed");
+					}
 				} else {
-					System.err.println("Song Name Updating Failed");
+					System.out.println("Song Name Updating Cancelled");
 				}
 				break;
 			}
