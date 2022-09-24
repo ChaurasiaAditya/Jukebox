@@ -56,7 +56,7 @@ public class Main {
 				displayService.displayMainMenu();
 				choice = scanner.nextInt();
 				switch (choice) {
-					case 1: {
+					case 1: { // Show all Songs from Database
 						// Get all songs from the database
 						List<Song> allSongsList = songRepository.getAll(connection);
 						// Display all the songs
@@ -69,7 +69,7 @@ public class Main {
 						songPlayerService.play(urlById);
 						break;
 					}
-					case 2: {
+					case 2: { // All songs with respected artist name
 						// prompt the user to enter the artist name
 						System.out.print("Enter the artist name : ");
 						scanner.nextLine();
@@ -86,7 +86,7 @@ public class Main {
 						songPlayerService.play(urlById);
 						break;
 					}
-					case 3: {
+					case 3: { // All songs with respected genre
 						// prompt the user to enter the genre
 						System.out.print("Enter the genre : ");
 						scanner.nextLine();
@@ -103,7 +103,7 @@ public class Main {
 						songPlayerService.play(urlById);
 						break;
 					}
-					case 4: { // SEARCH SONG BY NAME
+					case 4: { // search song by name
 						// prompt the user to enter the song name
 						System.out.print("Enter the song name : ");
 						scanner.nextLine();
@@ -120,17 +120,17 @@ public class Main {
 						songPlayerService.play(urlById);
 						break;
 					}
-					case 5: { // ADD SONG TO PLAYLIST
+					case 5: { // Make a playlist and Add songs to it
 						// prompt the user to enter the playlist name
 						System.out.print("Enter the playlist name : ");
-						String playlistName = scanner.next();
+						scanner.nextLine();
+						String playlistName = scanner.nextLine();
+						displayService.displayCatalogue(songRepository.getAll(connection));
 						// prompt the user to enter the Song Ids
-						System.out.print("Enter the Song Ids : ");
-						String playlistIds = scanner.next();
-						if (playlistRepository.createNewPlaylist(connection, playlistName, playlistIds)) {
+						System.out.print("Enter the Song Ids seperated by Spaces or 0 for Main Menu : ");
+						String playlistIds = scanner.nextLine();
+						if (!playlistIds.equals("0") && playlistRepository.createNewPlaylist(connection, playlistName, playlistIds)) {
 							System.out.println("\u001B[32mPlaylist added successfully\u001B[0m");
-						} else {
-							System.err.println("Playlist not added");
 						}
 						break;
 					}
@@ -139,18 +139,22 @@ public class Main {
 						List<String> allPlaylistNames = playlistRepository.getAllPlaylistNames(connection);
 						displayService.displayPlaylists(allPlaylistNames);
 
-						System.out.print("Enter the playlist Id to view the songs in the Playlist : ");
+						System.out.print("Enter the playlist Id to view the songs in the Playlist or 0 for Main Menu : ");
 						int playlistId = scanner.nextInt();
-						// Get all songs in playlist by playlist id from the database
-						List<Song> songsInPlaylist = playlistRepository.getAllSongsInPlaylist(connection, playlistId);
-						// Display all the songs
-						displayService.displayCatalogue(songsInPlaylist);
-						System.out.print("\nEnter the Song Id number to play the song : ");
-						// Get the song url by id from the database
-						int id = scanner.nextInt();
-						String urlById = songRepository.getUrlById(connection, id);
-						// Play the song
-						songPlayerService.play(urlById);
+						if (playlistId > 0) {
+							// Get all songs in playlist by playlist id from the database
+							List<Song> songsInPlaylist = playlistRepository.getAllSongsInPlaylist(connection, playlistId);
+							// Display all the songs
+							displayService.displayCatalogue(songsInPlaylist);
+							System.out.print("\nEnter the Song Id number to play the song or 0 for Main Menu : ");
+							// Get the song url by id from the database
+							int id = scanner.nextInt();
+							if (id > 0) {
+								String urlById = songRepository.getUrlById(connection, id);
+								// Play the song
+								songPlayerService.play(urlById);
+							}
+						}
 						break;
 					}
 					case 7: {
