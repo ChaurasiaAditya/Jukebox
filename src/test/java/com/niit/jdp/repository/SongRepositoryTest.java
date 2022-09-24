@@ -27,7 +27,7 @@ class SongRepositoryTest {
 		databaseService.connect();
 		connection = databaseService.getConnection();
 		songRepository = new SongRepository();
-		song = new Song(1, "Alone Alan", "Alan Walker", "EDM", "02:43");
+		song = new Song(1, "Alone Alan", "Alan Walker", "EDM", "02:43","src/main/resources/songs/Alone.wav");
 		song1 = new Song();
 		song1.setSongUrl("src/main/resources/songs/Alone.wav");
 		song1.setId(2);

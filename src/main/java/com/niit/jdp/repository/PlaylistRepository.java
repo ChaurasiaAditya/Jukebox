@@ -1,7 +1,7 @@
 /*
  * Author Name: Aditya Chaurasia
  * Date: 20-09-2022
- * Created With: IntelliJ IDEA Community Edition
+ * Created With: IntelliJ IDEA Ultimate
  * Profile: github.com/ChaurasiaAditya
  */
 package com.niit.jdp.repository;
@@ -134,10 +134,8 @@ public class PlaylistRepository {
 
 			// create a prepared statement object
 			try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
 				// set the values to the query
 				preparedStatement.setInt(1, playlistId);
-
 				// execute the query
 				return preparedStatement.executeUpdate() > 0;
 			}
@@ -160,7 +158,6 @@ public class PlaylistRepository {
 		try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 			// set the values for prepared statement
 			preparedStatement.setInt(1, playListId);
-
 			// execute the query
 			ResultSet resultSet = preparedStatement.executeQuery();
 
