@@ -29,15 +29,14 @@ public class PlaylistRepository {
 	 */
 	public boolean createNewPlaylist(Connection connection, String playlistName, String songNumbers) throws SQLException {
 		// convert string to array
-		char[] songNumbersArray = songNumbers.toCharArray();
+		String[] strings = songNumbers.split(" ");
 
 		// Create a StringJoiner with comma(,) as delimiter
 		StringJoiner stringJoiner = new StringJoiner(",");
 
 		// Add the elements to StringJoiner
-		for (char songNumber : songNumbersArray) {
-			stringJoiner.add(String.valueOf(songNumber));
-		}
+		Arrays.stream(strings).map(String::valueOf).forEachOrdered(stringJoiner::add);
+
 		// Create a string with the query
 		String query = "INSERT INTO `jukebox`.`playlists` (`name`, `songs_list`) VALUES (?, ?);";
 
@@ -75,7 +74,10 @@ public class PlaylistRepository {
 			String[] idInString = idsFromPlaylist.split(",");
 
 			// iterate over array to convert string array to integer array
-			int[] idInInteger = Arrays.stream(idInString).mapToInt(Integer::parseInt).toArray();
+			int[] idInInteger = Arrays
+				.stream(idInString)
+				.mapToInt(Integer::parseInt)
+				.toArray();
 
 			// iterate over integer array and store the variable in list
 			for (int ids : idInInteger) {

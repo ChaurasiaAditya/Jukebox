@@ -45,11 +45,11 @@ class PlaylistRepositoryTest {
 
 	@Test
 	void givenConnectionAndPlaylistIdReceiveIdsOfPlaylistSuccess() throws SQLException {
-		Assertions.assertEquals("1,2,3,4", playlistRepository.getIdsFromPlaylist(connection, 1), "Id not present in Database");
+		Assertions.assertEquals("1,2,3", playlistRepository.getIdsFromPlaylist(connection, 1), "Id not present in Database");
 	}
 
 	@Test
 	void givenConnectionAndPlaylistIdReceiveIdsOfPlaylistFailure() throws SQLException {
-		Assertions.assertNotEquals("1,2,3", playlistRepository.getIdsFromPlaylist(connection, 1), "Id not present in Database");
+		Assertions.assertNotEquals("1,2", playlistRepository.getIdsFromPlaylist(connection, 1), "Id not present in Database");
 	}
 }
