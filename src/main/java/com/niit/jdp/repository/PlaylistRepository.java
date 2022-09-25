@@ -6,7 +6,7 @@
  */
 package com.niit.jdp.repository;
 
-import com.niit.jdp.exeception.PlaylistIdNotFoundException;
+import com.niit.jdp.exception.PlaylistIdNotFoundException;
 import com.niit.jdp.model.Song;
 
 import java.sql.Connection;

@@ -67,8 +67,6 @@ w
 G.idea/sonarlint/issuestore/7/1/717d4d06bd2c8ab9cc1d80b9016a41c615495f72,9\a\9a5dc7ef5aab6f533d1331d9982808809df35423
 w
 G.idea/sonarlint/issuestore/d/a/dafd62bc110a1ed550a4adb3f993d5945449644d,1\4\148a25e26673f2a7f8e1080d79c48d8787e07152
-m
-=src/test/java/com/niit/jdp/repository/SongRepositoryTest.java,4\1\411558f0bc5ef3bb063b2207228d58f0589e4ae3
 q
 Asrc/test/java/com/niit/jdp/repository/PlaylistRepositoryTest.java,d\0\d01c6bb4dea02aab7f44205f59654122a3de3dec
 v
@@ -77,11 +75,9 @@ r
 Bsrc/main/java/com/niit/jdp/exeception/SongIdNotFoundException.java,7\5\7554ab73a89f290c62147f713a4887fa4a01553a
 ^
 .src/main/java/com/niit/jdp/model/Playlist.java,5\b\5babf34b02434545493a4e3c8d45ca106f1f5e26
-m
-=src/main/java/com/niit/jdp/repository/PlaylistRepository.java,2\4\24809a1184a7964e7f32ebdf585553dac4af9abb
-e
-5src/main/java/com/niit/jdp/repository/Repository.java,b\f\bf6f65185120d5158c3b2f1089d03db6c03b1b2b
 Z
 *src/main/java/com/niit/jdp/model/Song.java,0\1\014d77068afdd61babac0f449091ee271adda5cb
+f
+6src/main/java/com/niit/jdp/service/DisplayService.java,f\2\f242ddd9734aafbd51f9d524eea2ca0f9031a4ec
 g
 7src/main/java/com/niit/jdp/service/DatabaseService.java,d\f\df915df9a9d3dc9bcfe75dc66a18455a235f099a

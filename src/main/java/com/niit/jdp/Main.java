@@ -1,7 +1,7 @@
 package com.niit.jdp;
 
-import com.niit.jdp.exeception.PlaylistIdNotFoundException;
-import com.niit.jdp.exeception.SongIdNotFoundException;
+import com.niit.jdp.exception.PlaylistIdNotFoundException;
+import com.niit.jdp.exception.SongIdNotFoundException;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
 import com.niit.jdp.service.DatabaseService;

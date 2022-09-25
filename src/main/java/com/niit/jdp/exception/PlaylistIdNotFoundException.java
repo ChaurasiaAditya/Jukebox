@@ -4,10 +4,10 @@
  * Created With: IntelliJ IDEA Ultimate
  * Profile: github.com/ChaurasiaAditya
  */
-package com.niit.jdp.exeception;
+package com.niit.jdp.exception;
 
-public class SongIdNotFoundException extends Exception {
-	public SongIdNotFoundException(String message) {
+public class PlaylistIdNotFoundException extends Exception {
+	public PlaylistIdNotFoundException(String message) {
 		super(message);
 	}
 }
