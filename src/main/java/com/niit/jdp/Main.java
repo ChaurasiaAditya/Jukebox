@@ -1,13 +1,13 @@
 package com.niit.jdp;
 
-import com.niit.jdp.exception.PlaylistIdNotFoundException;
-import com.niit.jdp.exception.SongIdNotFoundException;
+import com.niit.jdp.exception.InvalidPlaylistIdException;
+import com.niit.jdp.exception.InvalidSongIdException;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
 import com.niit.jdp.service.DatabaseService;
 import com.niit.jdp.service.DisplayService;
 import com.niit.jdp.service.SongPlayerService;
-import com.niit.jdp.service.SongSetting;
+import com.niit.jdp.service.JukeboxSetting;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -45,7 +45,7 @@ public class Main {
 			PlaylistRepository playlistRepository = new PlaylistRepository();
 
 			// Create a Song Setting Object
-			SongSetting songSetting = new SongSetting();
+			JukeboxSetting jukeboxSetting = new JukeboxSetting();
 
 			int choice;
 			do {
@@ -150,7 +150,7 @@ public class Main {
 					}
 					case 7: {
 						// Call the setting method to perform the setting Operations
-						songSetting.setting(connection, scanner, displayService, playlistRepository, songRepository);
+						jukeboxSetting.setting(connection, scanner, displayService, playlistRepository, songRepository);
 						break;
 					}
 					default:
@@ -159,7 +159,7 @@ public class Main {
 			} while (choice != 8);
 
 		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException |
-				 PlaylistIdNotFoundException | SongIdNotFoundException exception) {
+				 InvalidPlaylistIdException | InvalidSongIdException exception) {
 			System.out.println(exception.getMessage());
 		}
 		scanner.close();

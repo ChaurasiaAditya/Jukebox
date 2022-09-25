@@ -6,8 +6,8 @@
  */
 package com.niit.jdp.exception;
 
-public class SongIdNotFoundException extends Exception {
-	public SongIdNotFoundException(String message) {
+public class InvalidSongIdException extends Exception {
+	public InvalidSongIdException(String message) {
 		super(message);
 	}
 }

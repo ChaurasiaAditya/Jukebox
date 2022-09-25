@@ -6,8 +6,8 @@
  */
 package com.niit.jdp.service;
 
-import com.niit.jdp.exception.PlaylistIdNotFoundException;
-import com.niit.jdp.exception.SongIdNotFoundException;
+import com.niit.jdp.exception.InvalidPlaylistIdException;
+import com.niit.jdp.exception.InvalidSongIdException;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
 
@@ -15,8 +15,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class SongSetting {
-	public void setting(Connection connection, Scanner scanner, DisplayService displayService, PlaylistRepository playlistRepository, SongRepository songRepository) throws SQLException, PlaylistIdNotFoundException, SongIdNotFoundException {
+public class JukeboxSetting {
+	public void setting(Connection connection, Scanner scanner, DisplayService displayService, PlaylistRepository playlistRepository, SongRepository songRepository) throws SQLException, InvalidPlaylistIdException, InvalidSongIdException {
 
 		displayService.displaySetting();
 		int counter;

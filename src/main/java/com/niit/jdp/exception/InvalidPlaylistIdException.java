@@ -6,8 +6,8 @@
  */
 package com.niit.jdp.exception;
 
-public class PlaylistIdNotFoundException extends Exception {
-	public PlaylistIdNotFoundException(String message) {
+public class InvalidPlaylistIdException extends Exception {
+	public InvalidPlaylistIdException(String message) {
 		super(message);
 	}
 }

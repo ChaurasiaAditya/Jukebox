@@ -1,6 +1,6 @@
 package com.niit.jdp.repository;
 
-import com.niit.jdp.exception.SongIdNotFoundException;
+import com.niit.jdp.exception.InvalidSongIdException;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -21,10 +21,10 @@ public interface Repository<T> {
 	List<T> getByName(Connection connection, String name) throws SQLException;
 
 	// Update T
-	boolean updateById(Connection connection, int id, String name) throws SQLException, SongIdNotFoundException;
+	boolean updateById(Connection connection, int id, String name) throws SQLException, InvalidSongIdException;
 
 	// Delete T
-	boolean deleteById(Connection connection, int id) throws SQLException, SongIdNotFoundException;
+	boolean deleteById(Connection connection, int id) throws SQLException, InvalidSongIdException;
 
-	String getUrlById(Connection connection, int id) throws SQLException, SongIdNotFoundException;
+	String getUrlById(Connection connection, int id) throws SQLException, InvalidSongIdException;
 }

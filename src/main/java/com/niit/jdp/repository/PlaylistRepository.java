@@ -6,7 +6,7 @@
  */
 package com.niit.jdp.repository;
 
-import com.niit.jdp.exception.PlaylistIdNotFoundException;
+import com.niit.jdp.exception.InvalidPlaylistIdException;
 import com.niit.jdp.model.Song;
 
 import java.sql.Connection;
@@ -59,9 +59,9 @@ public class PlaylistRepository {
 	 * @param playlistId The id of the playlist you want to get the songs from.
 	 * @return A list of songs
 	 */
-	public List<Song> getAllSongsInPlaylist(Connection connection, int playlistId) throws SQLException, PlaylistIdNotFoundException {
+	public List<Song> getAllSongsInPlaylist(Connection connection, int playlistId) throws SQLException, InvalidPlaylistIdException {
 		if (playlistId < 0) {
-			throw new PlaylistIdNotFoundException("Id Cannot be Negative");
+			throw new InvalidPlaylistIdException("Id Cannot be Negative");
 		} else {
 			// Create an object of SongRepository class
 			SongRepository songRepository = new SongRepository();
@@ -125,9 +125,9 @@ public class PlaylistRepository {
 	 * @param playlistId The id of the playlist
 	 * @return A boolean value.
 	 */
-	public boolean deletePlaylist(Connection connection, int playlistId) throws SQLException, PlaylistIdNotFoundException {
+	public boolean deletePlaylist(Connection connection, int playlistId) throws SQLException, InvalidPlaylistIdException {
 		if (playlistId < 0) {
-			throw new PlaylistIdNotFoundException("Id Cannot be Negative");
+			throw new InvalidPlaylistIdException("Id Cannot be Negative");
 		} else {
 			// write the query to delete the playlist
 			String query = "DELETE FROM `jukebox`.`playlists` WHERE (`id` = ?);";

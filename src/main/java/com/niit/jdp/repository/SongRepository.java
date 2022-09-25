@@ -6,7 +6,7 @@
  */
 package com.niit.jdp.repository;
 
-import com.niit.jdp.exception.SongIdNotFoundException;
+import com.niit.jdp.exception.InvalidSongIdException;
 import com.niit.jdp.model.Song;
 
 import java.sql.Connection;
@@ -156,9 +156,9 @@ public class SongRepository implements Repository<Song> {
 	 * @throws SQLException sql exception
 	 */
 	@Override
-	public boolean updateById(Connection connection, int id, String name) throws SQLException, SongIdNotFoundException {
+	public boolean updateById(Connection connection, int id, String name) throws SQLException, InvalidSongIdException {
 		if (id < 0) {
-			throw new SongIdNotFoundException("Id Cannot be Negative");
+			throw new InvalidSongIdException("Id Cannot be Negative");
 		} else {
 			// write the query to update the song by id
 			String query = "UPDATE `jukebox`.`songs` SET `name` = ? WHERE (`id` = ?);";
@@ -186,9 +186,9 @@ public class SongRepository implements Repository<Song> {
 	 * @throws SQLException sql exception
 	 */
 	@Override
-	public boolean deleteById(Connection connection, int id) throws SQLException, SongIdNotFoundException {
+	public boolean deleteById(Connection connection, int id) throws SQLException, InvalidSongIdException {
 		if (id < 0) {
-			throw new SongIdNotFoundException("Id Cannot be Negative");
+			throw new InvalidSongIdException("Id Cannot be Negative");
 		} else {
 			// write the query to delete the song by id
 			String query = "DELETE FROM `jukebox`.`songs` WHERE (`id` = ?);";
@@ -213,10 +213,10 @@ public class SongRepository implements Repository<Song> {
 	 * @param id         The id of the song
 	 * @return The url of the song with the given id.
 	 */
-	public String getUrlById(Connection connection, int id) throws SQLException, SongIdNotFoundException {
+	public String getUrlById(Connection connection, int id) throws SQLException, InvalidSongIdException {
 
 		if (id < 0) {
-			throw new SongIdNotFoundException("Id Cannot be Negative");
+			throw new InvalidSongIdException("Id Cannot be Negative");
 		} else {
 			Song song1 = getAll(connection).stream().filter(song -> song.getId() == id).findFirst().orElse(new Song());
 			return song1.getSongUrl();
