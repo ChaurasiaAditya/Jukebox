@@ -8,13 +8,11 @@ package com.niit.jdp.service;
 
 import com.niit.jdp.exeception.PlaylistIdNotFoundException;
 import com.niit.jdp.exeception.SongIdNotFoundException;
-import com.niit.jdp.model.Song;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Scanner;
 
 public class SongSetting {
@@ -26,8 +24,7 @@ public class SongSetting {
 		switch (counter) {
 			case 1: { // Delete a Playlist
 				// Get all playlist from the database
-				List<String> allPlaylistNames = playlistRepository.getAllPlaylistNames(connection);
-				displayService.displayPlaylists(allPlaylistNames);
+				displayService.displayPlaylists(playlistRepository.getAllPlaylistNames(connection));
 				System.out.println("Enter the playlist Id to delete the Playlist or 0 to Cancel delete process");
 				System.out.print("Enter your Choice : ");
 				int playlistId = scanner.nextInt();
@@ -39,9 +36,8 @@ public class SongSetting {
 				break;
 			}
 			case 2: { // Delete a Song
-				List<Song> allSongsList = songRepository.getAll(connection);
 				// Display all the songs
-				displayService.displayCatalogue(allSongsList);
+				displayService.displayCatalogue(songRepository.getAll(connection));
 				System.out.println("Enter the Song Id to delete the Song or 0 to Cancel delete process");
 				System.out.print("Enter your Choice : ");
 				int id = scanner.nextInt();
@@ -51,9 +47,8 @@ public class SongSetting {
 				break;
 			}
 			case 3: { // Update Song Name
-				List<Song> allSongsList = songRepository.getAll(connection);
 				// Display all the songs
-				displayService.displayCatalogue(allSongsList);
+				displayService.displayCatalogue(songRepository.getAll(connection));
 				System.out.print("Enter the Song Id to Update the Name or 0 to Cancel Update process : ");
 				int id = scanner.nextInt();
 				if (id > 0) {

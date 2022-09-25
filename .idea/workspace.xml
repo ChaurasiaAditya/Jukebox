@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="Optimised Main class">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="reformatted the code">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,17 +16,12 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/411558f0bc5ef3bb063b2207228d58f0589e4ae3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/PlaylistIdNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/PlaylistIdNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/SongIdNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/SongIdNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongSetting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/niit/jdp/repository/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niit/jdp/repository/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +41,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/PlaylistIdNotFoundException.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/exeception/SongIdNotFoundException.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Song.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DatabaseService.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/service/DisplayService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongPlayerService.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongSetting.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/service/SongSetting.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -108,7 +104,7 @@
       <recent name="com.niit.jdp.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.niit.jdp in Jukebox">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niit.jdp.Main" />
       <module name="Jukebox" />
@@ -184,8 +180,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.niit.jdp in Jukebox" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.com.niit.jdp in Jukebox" />
         <item itemvalue="JUnit.SongRepositoryTest" />
         <item itemvalue="JUnit.PlaylistRepositoryTest" />
         <item itemvalue="JUnit.SongRepositoryTest.givenNameCheckSongObjectSuccess" />
@@ -239,14 +235,11 @@
       <workItem from="1664019155471" duration="1938000" />
       <workItem from="1664021489068" duration="6646000" />
       <workItem from="1664038568965" duration="8573000" />
-      <workItem from="1664047160785" duration="644000" />
-    </task>
-    <task id="LOCAL-00067" summary="created play method in MusicPlayerService class">
-      <created>1663770063125</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1663770063125</updated>
+      <workItem from="1664047160785" duration="726000" />
+      <workItem from="1664047892352" duration="208000" />
+      <workItem from="1664098839070" duration="4540000" />
+      <workItem from="1664112719214" duration="581000" />
+      <workItem from="1664113938150" duration="1771000" />
     </task>
     <task id="LOCAL-00068" summary="created method to get url of song by id in MusicPlayerService class">
       <created>1663771058488</created>
@@ -584,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664045729862</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="reformatted the code">
+      <created>1664047871735</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1664047871735</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +606,6 @@
     <MESSAGE value="updated song player service class" />
     <MESSAGE value="updated playlist repository class" />
     <MESSAGE value="added the method to get ids from playlist" />
-    <MESSAGE value="reformatted the code" />
     <MESSAGE value="added test case to check songs by Ids" />
     <MESSAGE value="added test case to check url by id" />
     <MESSAGE value="added test case to check ids from playlist in PlaylistRepositoryTest" />
@@ -627,10 +626,22 @@
     <MESSAGE value="Optimised SongPlayerService class" />
     <MESSAGE value="Optimised PlaylistRepository class" />
     <MESSAGE value="Optimised Main class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimised Main class" />
+    <MESSAGE value="reformatted the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformatted the code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Jukebox$com_niit_jdp_in_Jukebox.ic" NAME="com.niit.jdp in Jukebox Coverage Results" MODIFIED="1664101387256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.niit.jdp.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Jukebox$SongRepositoryTest.ic" NAME="SongRepositoryTest Coverage Results" MODIFIED="1664101339387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.niit.jdp.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Jukebox$Main.ic" NAME="Main Coverage Results" MODIFIED="1664101315078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.niit.jdp.*</FILTER>
+    </SUITE>
   </component>
 </project>

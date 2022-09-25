@@ -14,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -81,7 +82,7 @@ public class SongRepository implements Repository<Song> {
 				String songUrl = resultSet.getString("url");
 
 				// create a song object
-				Song song = new Song(id, name, artist, genre, duration,songUrl);
+				Song song = new Song(id, name, artist, genre, duration, songUrl);
 				// add the song to the list
 				songList.add(song);
 			}
@@ -101,8 +102,7 @@ public class SongRepository implements Repository<Song> {
 	@Override
 	public List<Song> getByArtist(Connection connection, String artist) throws SQLException {
 		// call the getAll method to get all the songs from the database
-		List<Song> songList = getAll(connection);
-		return songList.stream().filter(song -> song.getArtist().equalsIgnoreCase(artist)).collect(Collectors.toList());
+		return getAll(connection).stream().filter(song -> song.getArtist().equalsIgnoreCase(artist)).collect(Collectors.toList());
 	}
 
 	/**
@@ -116,8 +116,7 @@ public class SongRepository implements Repository<Song> {
 	@Override
 	public List<Song> getByGenre(Connection connection, String genre) throws SQLException {
 		// call the getAll method to get all the songs from the database
-		List<Song> all = getAll(connection);
-		return all.stream().filter(songs -> songs.getGenre().equalsIgnoreCase(genre)).collect(Collectors.toList());
+		return getAll(connection).stream().filter(songs -> songs.getGenre().equalsIgnoreCase(genre)).collect(Collectors.toList());
 	}
 
 	/**
@@ -130,8 +129,7 @@ public class SongRepository implements Repository<Song> {
 	 */
 	public Song geyById(Connection connection, int id) throws SQLException {
 		// call the getAll method to get all the songs from the database
-		List<Song> songList = getAll(connection);
-		return songList.stream().filter(song -> song.getId() == id).findFirst().orElse(new Song());
+		return getAll(connection).stream().filter(song -> song.getId() == id).findFirst().orElse(new Song());
 	}
 
 	/**
@@ -145,8 +143,7 @@ public class SongRepository implements Repository<Song> {
 	@Override
 	public List<Song> getByName(Connection connection, String name) throws SQLException {
 		// call the getAll method to get all the songs from the database
-		List<Song> songList = getAll(connection);
-		return songList.stream().filter(song -> song.getName().equals(name)).collect(Collectors.toList());
+		return getAll(connection).stream().filter(song -> song.getName().equals(name)).collect(Collectors.toList());
 	}
 
 	/**
@@ -221,9 +218,14 @@ public class SongRepository implements Repository<Song> {
 		if (id < 0) {
 			throw new SongIdNotFoundException("Id Cannot be Negative");
 		} else {
-			List<Song> songList = getAll(connection);
-			Song song1 = songList.stream().filter(song -> song.getId() == id).findFirst().orElse(new Song());
+			Song song1 = getAll(connection).stream().filter(song -> song.getId() == id).findFirst().orElse(new Song());
 			return song1.getSongUrl();
 		}
+	}
+
+	public List<Song> shuffleSongs(Connection connection) throws SQLException {
+		List<Song> shuffleSongList = getAll(connection);
+		Collections.shuffle(shuffleSongList);
+		return shuffleSongList;
 	}
 }

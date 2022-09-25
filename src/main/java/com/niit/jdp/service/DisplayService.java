@@ -7,7 +7,10 @@
 package com.niit.jdp.service;
 
 import com.niit.jdp.model.Song;
+import com.niit.jdp.repository.SongRepository;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 public class DisplayService {
@@ -61,5 +64,9 @@ public class DisplayService {
 		System.out.println("2. Delete A Song");
 		System.out.println("3. Update Song Name");
 		System.out.print("Enter Your Choice : ");
+	}
+
+	public void playing(Connection connection, SongRepository songRepository, int id) throws SQLException {
+		System.out.println("\u001B[35mPlaying :- " + songRepository.geyById(connection, id).getName() + " By " + songRepository.geyById(connection, id).getArtist() + "\u001B[0m");
 	}
 }
