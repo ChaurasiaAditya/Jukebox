@@ -59,25 +59,18 @@ public class PlaylistRepository {
 	 * @param playlistId The id of the playlist you want to get the songs from.
 	 * @return A list of songs
 	 */
-	public List<Song> getAllSongsInPlaylist(Connection connection, int playlistId) throws SQLException, InvalidPlaylistIdException {
+	public List<Song> getAllSongsInPlaylist(Connection connection, SongRepository songRepository, int playlistId) throws SQLException, InvalidPlaylistIdException {
 		if (playlistId < 0) {
 			throw new InvalidPlaylistIdException("Id Cannot be Negative");
 		} else {
-			// Create an object of SongRepository class
-			SongRepository songRepository = new SongRepository();
 			// Create a list of songs
 			List<Song> songList = new ArrayList<>();
 
-			// store the ids in a string
-			String idsFromPlaylist = getIdsFromPlaylist(connection, playlistId);
 			// convert the string to array seperated by (,)
-			String[] idInString = idsFromPlaylist.split(",");
+			String[] idInString = getIdsFromPlaylist(connection, playlistId).split(",");
 
 			// iterate over array to convert string array to integer array
-			int[] idInInteger = Arrays
-				.stream(idInString)
-				.mapToInt(Integer::parseInt)
-				.toArray();
+			int[] idInInteger = Arrays.stream(idInString).mapToInt(Integer::parseInt).toArray();
 
 			// iterate over integer array and store the variable in list
 			for (int ids : idInInteger) {

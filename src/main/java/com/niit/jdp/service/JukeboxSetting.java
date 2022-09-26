@@ -11,6 +11,9 @@ import com.niit.jdp.exception.InvalidSongIdException;
 import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -66,7 +69,19 @@ public class JukeboxSetting {
 				break;
 			}
 			default:
-				System.out.println("Exit Setting");
+				System.out.println("Invalid Choice Exiting Setting");
+		}
+	}
+
+	public void playNext(Connection connection, DisplayService displayService, SongRepository songRepository, SongPlayerService songPlayerService, int id) throws SQLException, InvalidSongIdException, UnsupportedAudioFileException, LineUnavailableException, IOException {
+		while (id < 12) {
+			displayService.playing(connection, songRepository, id);
+			// Play the song
+			boolean playNext = songPlayerService.playNext(songRepository.getUrlById(connection, id));
+			if (playNext) {
+				break;
+			}
+			id++;
 		}
 	}
 }

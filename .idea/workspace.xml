@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="reformatted the code">
+    <list default="true" id="55e97b46-7413-4d61-823c-ae77ba0a02e0" name="Changes" comment="Added feature to play next song">
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Alone.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cartoon.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Elektronomia.wav" afterDir="false" />
@@ -16,14 +16,13 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Lost Sky.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Snowfall.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Superhero.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/717d4d06bd2c8ab9cc1d80b9016a41c615495f72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/7554ab73a89f290c62147f713a4887fa4a01553a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/b/9bf0cfcd12b8dca84a261ba42e209135ae2141c1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/dafd62bc110a1ed550a4adb3f993d5945449644d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/PlaylistIdNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/InvalidPlaylistIdException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/SongIdNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/InvalidSongIdException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/JukeboxSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niit/jdp/service/JukeboxSetting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/niit/jdp/repository/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niit/jdp/repository/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/InvalidPlaylistIdException.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/exception/InvalidSongIdException.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/niit/jdp/model/Playlist.java" root0="SKIP_INSPECTION" />
@@ -244,21 +243,13 @@
       <workItem from="1664113938150" duration="1989000" />
       <workItem from="1664116551322" duration="826000" />
       <workItem from="1664119266471" duration="2285000" />
-      <workItem from="1664121898340" duration="1670000" />
-    </task>
-    <task id="LOCAL-00071" summary="added query in create_table_query.sql">
-      <created>1663777396658</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1663777396658</updated>
-    </task>
-    <task id="LOCAL-00072" summary="added query in  create_table_query.sql">
-      <created>1663777559064</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1663777559064</updated>
+      <workItem from="1664121898340" duration="2039000" />
+      <workItem from="1664129061920" duration="3227000" />
+      <workItem from="1664163639508" duration="5844000" />
+      <workItem from="1664202949182" duration="1794000" />
+      <workItem from="1664204911130" duration="616000" />
+      <workItem from="1664209374695" duration="1291000" />
+      <workItem from="1664210701897" duration="301000" />
     </task>
     <task id="LOCAL-00073" summary="added query in  create_table_query.sql">
       <created>1663787555466</created>
@@ -589,7 +580,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664124588453</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="reformatted the code">
+      <created>1664124771289</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1664124771289</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Added feature to play next song">
+      <created>1664205450603</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1664205450604</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added the Main method" />
     <MESSAGE value="updated song player service class" />
     <MESSAGE value="updated playlist repository class" />
     <MESSAGE value="added the method to get ids from playlist" />
@@ -632,7 +636,8 @@
     <MESSAGE value="Optimised PlaylistRepository class" />
     <MESSAGE value="Optimised Main class" />
     <MESSAGE value="reformatted the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformatted the code" />
+    <MESSAGE value="Added feature to play next song" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added feature to play next song" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

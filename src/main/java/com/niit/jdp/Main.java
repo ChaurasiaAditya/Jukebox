@@ -6,8 +6,8 @@ import com.niit.jdp.repository.PlaylistRepository;
 import com.niit.jdp.repository.SongRepository;
 import com.niit.jdp.service.DatabaseService;
 import com.niit.jdp.service.DisplayService;
-import com.niit.jdp.service.SongPlayerService;
 import com.niit.jdp.service.JukeboxSetting;
+import com.niit.jdp.service.SongPlayerService;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -65,9 +65,7 @@ public class Main {
 							// Play the song
 							songPlayerService.play(songRepository.getUrlById(connection, ids));
 						} else {
-							displayService.playing(connection, songRepository, id);
-							// Play the song
-							songPlayerService.play(songRepository.getUrlById(connection, id));
+							jukeboxSetting.playNext(connection, displayService, songRepository, songPlayerService, id);
 						}
 						break;
 					}
@@ -138,7 +136,7 @@ public class Main {
 						int playlistId = scanner.nextInt();
 						if (playlistId > 0) {
 							// Display all the songs
-							displayService.displayCatalogue(playlistRepository.getAllSongsInPlaylist(connection, playlistId));
+							displayService.displayCatalogue(playlistRepository.getAllSongsInPlaylist(connection, songRepository, playlistId));
 							System.out.print("\nEnter the Song Id number to play the song : ");
 							// Get the song url by id from the database
 							int id = scanner.nextInt();
@@ -157,7 +155,6 @@ public class Main {
 						System.out.println("\u001B[32mThank You For Using Jukebox\u001B[0m");
 				}
 			} while (choice != 8);
-
 		} catch (SQLException | UnsupportedAudioFileException | LineUnavailableException | IOException |
 				 InvalidPlaylistIdException | InvalidSongIdException exception) {
 			System.out.println(exception.getMessage());
